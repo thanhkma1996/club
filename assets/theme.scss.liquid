@@ -7023,10 +7023,9 @@
     }
   
     .product-item {
-      width: 45%;
-      margin-right: 10px;
+      width: 100%;
       vertical-align: top;
-      padding-bottom:30px;
+      padding-bottom:50px;
   
       @include media($min: $breakpoint-l) {
         float: left;
@@ -8595,4 +8594,17 @@
     }
   #scasl-app-container select {
     background-image: url("{{ 'arrow-select.png' | asset_url }}"); 
+  }
+
+  //Responsive mobile tablet
+
+  @media (max-width: 1200px) and (min-width: 768px){
+    .site-header {
+        max-width: 70% !important;
+    }
+    .index-wrapper .shopify-section {
+        &.section-featured-products  {
+            max-width: 70%;
+        }
+    }
   }

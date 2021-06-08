@@ -64,7 +64,7 @@
 
   <div class="site-footer-item site-footer-nav">
     <nav class="footnav footnav-count-{{ menu_count }}">
-
+      <div class="mobile-social">{% if section.settings.enable_social %}{% include 'social' %}{% endif %}</div>
       {% for block in section.blocks %}
         <div class="footnav-item footnav-item-{{ block.type }}" {{ block.shopify_attributes }}>
 
@@ -110,7 +110,7 @@
               </ul>
             {% endif %} -->
 
-            {% if section.settings.enable_social %}{% include 'social' %}{% endif %}
+            <div class="desktop-social">{% if section.settings.enable_social %}{% include 'social' %}{% endif %}</div>
           {% endif %}
 
         </div>
