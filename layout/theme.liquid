@@ -1,0 +1,140 @@
+<!doctype html>
+<!--[if IE 9]><html class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!--><html class="no-js"><!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+
+    <title>
+      {{- page_title -}}
+
+      {%- if current_tags -%}
+        {%- assign meta_tags = current_tags | join: ', ' %}
+        {{ 'title.tags' | t: tags: meta_tags -}}
+      {%- endif -%}
+
+      {%- if current_page != 1 -%}
+        {{- 'title.page' | t: page: current_page -}}
+      {%- endif -%}
+
+      {%- unless page_title contains shop.name -%}
+        {{- 'title.shop' | t: shop: shop.name -}}
+      {%- endunless -%}
+    </title>
+
+    {% if page_description != blank %}
+      <meta name="description" content="{{ page_description | escape }}">
+    {% endif %}
+
+    {% if settings.favicon != blank %}
+      <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png">
+    {% endif %}
+
+    {%- include 'open-graph' -%}
+    {%- include 'twitter-card' -%}
+
+    <link rel="canonical" href="{{ canonical_url }}">
+    <meta name="viewport" content="width=device-width">
+
+    {{ content_for_header }}
+
+    <script>
+      document.documentElement.className=document.documentElement.className.replace(/\bno-js\b/,'js');
+      if(window.Shopify&&window.Shopify.designMode)document.documentElement.className+=' in-theme-editor';
+    </script>
+
+    {% include 'google-fonts', fonts: 'font_title|font_body|font_label' %}
+    {{ 'theme.scss.css' | asset_url | stylesheet_tag }}
+    {{ 'customer.scss.css' | asset_url | stylesheet_tag }}
+    {{ 'slick.css' | asset_url | stylesheet_tag }}
+    {{ 'custom.scss.css' | asset_url | stylesheet_tag }}
+
+    <!-- Global site tag (gtag.js) - Google Ads: 665208553 --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-665208553"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-665208553'); </script>
+    
+</head>
+
+  <body class="page-template-{{ template | replace: '_', '-' }}">
+    {% if template contains 'password' %}
+      <main class="site-main">
+        {{ content_for_layout }}
+      </main>
+    {% else %}
+      {% section 'static-header' %}
+      {% section 'static-meganav' %}
+      {% section 'static-contactbar' %}
+
+      <main class="site-main">
+        {{ content_for_layout }}
+      </main>
+
+      {% section 'site-footer' %}
+    {% endif %}
+
+    {%- if template contains 'cart' -%}
+      {{ '//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js' | script_tag }}
+      {{ '/services/javascripts/countries.js' | script_tag }}
+      {{ 'shopify_common.js' | shopify_asset_url | script_tag }}
+    {%- endif -%}
+
+    {%- if template contains 'customer' -%}
+      {{ 'shopify_common.js' | shopify_asset_url | script_tag }}
+      {{ 'customer_area.js'  | shopify_asset_url | script_tag }}
+    {%- endif -%}
+     {{ 'jquery-1.12.0.min.js' | asset_url | script_tag }}
+     {{ 'Hs_cart.js' | asset_url | script_tag }}
+    <script src="{{ 'handy.js' | asset_url }}"
+      data-scripts
+      data-shopify-api-url="{{ 'api.jquery.js' | shopify_asset_url }}"
+      data-shopify-cart-url="{{ 'jquery.cart.js' | asset_url }}"
+      data-shopify-currencies="//cdn.shopify.com/s/javascripts/currencies.js"
+      data-shopify-jquery-currencies="{{ 'jquery.currencies.min.js' | asset_url }}"
+      data-shopify-qrcode="{{ 'vendor/qrcode.js' | shopify_asset_url }}"
+    ></script>
+    {{ 'custom.js' | asset_url | script_tag }}
+    {% include 'structured-data' %}
+    <script>
+      $('document').ready(function(){
+      	$('#mce-success-response').bind("DOMSubtreeModified",function(){
+           $('#mc_embed_signup').hide();
+          $('.newsletter-modal-success').show();
+  		});
+
+      });
+
+    </script>
+    <script>
+        // For handling minicart timeout
+        var miniCartTO;
+
+      	var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("product_image");
+  var dots = document.getElementsByClassName("dot");
+  //if (slides.length > 0 && dots.length > 0) {
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000);
+//  }
+}
+    </script>
+        	 {{ 'slick.js' | asset_url | script_tag }}
+  </body>
+</html>

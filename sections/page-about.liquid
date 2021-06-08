@@ -1,0 +1,90 @@
+<div class="page-about">
+	<div class="banner-page">
+		<img src="{{section.settings.image_banner | img_url: '1090x'}}">
+	</div>
+	<div class="page-content rte">
+    {{ page.content }}
+    <table class="table-about-us">
+  		<thead>
+  			<th>{{ section.settings.compound_title }}</th>
+  			<th>{{ section.settings.benefit_title }}</th>
+  		</thead>
+  		<tbody>
+  			{% for block in section.blocks %}  
+			  <tr class="">   
+			   	<td class="table-item">
+			   		{{block.settings.compound_item}}
+			   	</td>
+			   	<td class="table-item">
+			   		{{block.settings.benefit_item}}
+			   	</td>
+			  </tr> 
+			{% endfor %}
+  		</tbody>
+  	</table>
+  	</div>
+</div>
+{% schema %}
+  {
+    "name": "About us",
+    "settings": [
+    	{
+	      "type": "image_picker",
+	      "id": "image_banner",
+	      "label": "Banner page"
+    	},
+    	{
+          "id": "compound_title",
+          "type": "text",
+          "label": "Compound title",
+          "default": "Compound title"
+        },
+        {
+          "id": "benefit_title",
+          "type": "text",
+          "label": "Benefit title",
+          "default": "Benefit title"
+        }
+    ],
+    "blocks": [
+    {
+      "type": "select",
+      "name": "Add list compound",
+      "settings": [
+        {
+          "id": "compound_item",
+          "type": "text",
+          "label": "Compound item",
+          "default": "Compound item"
+        },
+        {
+          "id": "benefit_item",
+          "type": "text",
+          "label": "Benefit item",
+          "default": "Benefit item"
+        }
+      ]
+    }
+	],
+	"presets": [
+	    {
+	      "name": "About us",
+	      "category": "page",
+	      "blocks": [
+	        { 
+	          "type": "select"
+	        },
+	        {
+	          "type": "select"
+	        }
+	      ]
+	    }
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

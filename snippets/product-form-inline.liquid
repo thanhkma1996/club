@@ -1,0 +1,16 @@
+<form class="product-form-inline" method="post" action="/cart" data-product-form-inline>
+  {% include 'product-options', type: 'select' %}
+  <div class="product-form-inline-atc">
+    {% include 'quantity' %}
+	 {% if enable_inline_form and section.settings.enable_social_sharing %}
+      {% include 'share-buttons' %}
+    {% endif %}
+ 
+ <button class="button_addtocart_detail" type="submit" data-product-atc >ADD TO CART  - <span class="money_detail"
+            data-product-menu-button-atc-variant-price
+            data-variant-price>
+            {{ product.selected_or_first_available_variant.price | money }}
+          </span></button> 
+  </div> 
+
+</form>

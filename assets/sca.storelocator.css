@@ -1,0 +1,288 @@
+.pac-container {z-index: 10000000 !important;}
+.scasl-location-mobile-wrap {
+    clear: left;
+    float: left;
+    width: 100%;
+    display:none !important;
+}
+#scasl-app-container{
+  max-width: 70%;
+  margin: 0 auto;
+  display: block;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+@media(max-width: 959px){
+  #scasl-app-container{
+    max-width: 100%;
+    padding: 0 30px;
+  }
+}
+#scasl-app-container #page-header{
+  width: 100%;
+  max-width: 100%;
+}
+#scasl-app-container #page-header .bh-sl-title{
+    font-family: nunito_sansextralight;
+    font-size: 30px;
+    margin-top: 0;
+    line-height: 32px;
+    color: #a19061;
+    text-transform: lowercase;
+    font-size: 70px;
+    font-weight: 100;
+    text-align: center;
+}
+
+@media(max-width: 959px){
+  #scasl-app-container #page-header .bh-sl-title{
+    font-size: 40px;
+  }
+}
+.scasl-location-mobile {
+  height: 50px !important;cursor: pointer !important;
+}
+#scasl-app-container {margin-left: 10px;margin-right: 10px;z-index: 100 !important; position: relative;}
+#bh-sl-map div {  box-sizing: initial !important;}
+#scasl-window-container div, #scasl-window-container div span{word-break:     normal !important;}
+#scasl-description p {word-break: break-all !important;}
+.bh-sl-container { padding: 0 !important; }
+#scasl-tab-radius h3 { text-transform: uppercase; margin-top: 0; padding-bottom: 10px; font-weight: normal; border-bottom: 1px solid #ccc; }
+.scasl-distance, .scasl-distance label { 
+  width: 100% !important; 
+  font-family: nunito_sansregular; 
+  font-weight: 500 !important;
+  color: #263147;
+  margin-bottom: 15px;
+}
+.scasl-distance { display: inline-block; margin: 0; }
+.scasl-container .form-input input, .scasl-container .form-input select { height: 35px; background-color: #fff; }
+.scasl-tag { margin: 0 !important; }
+.scasl-tag > label { font-weight: bold; }
+.scasl-tag-list { width: 100%; }
+.scasl-tag-list, .scasl-tag-list li { margin: 0 20px 0 0 !important; }
+.scasl-tag-list li { padding: 0; clear: none !important; width: auto !important; }
+.scasl-tag-list li label { font-weight: normal; }
+.scasl-tag-list li label input { margin-top: 2px; }
+.scasl-search-btn {  }
+.bh-sl-loc-list, .bh-sl-map { border: 1px solid #ccc; }
+.bh-sl-loc-list ul li { 
+  margin: 0 !important;
+  background: none !important;
+  border-bottom: 1px solid #e2e3e5 !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  border-top: 0 !important;
+}
+.scasl-location-list { width: 39% !important; }
+.scasl-map { float: right !important; width: 59% !important; }
+.scasl-search-btn button, #scapl-geocode-btn { background: #30ABD9; height: 34px; 
+  border-radius: 0;
+  padding: 5.5px 20px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+#scapl-geocode-btn { float: right; }
+.scasl-list-image, .scasl-info-image { float: right; }
+.scasl-list-image {/* width: 22%;*/ margin: 10px 10px 0 0; }
+.scasl-info-image {/* width: 28%; */margin: 5px 0 0 5px; }
+.scasl-list-image img, .scasl-info-image img { /*width: 100%;*/ width: 50px;height: auto; }
+.scasl-info-location, .scasl-location-list { float: left; }
+.scasl-tags { background: url("//secomapp.com/storelocator/assets/cdn/img/tag.png") no-repeat scroll 0 1px transparent; padding: 2px 10px 0 16px; float: left;background-position-y:4px;}
+.bh-sl-container .form-input, .bh-sl-container .form-input input, .bh-sl-container .form-input select { 
+  width: 100% !important; 
+  opacity: 1 !important; 
+  border-radius: 0;
+  color:#263147;
+}
+.bh-sl-container .form-input select{
+  height: 45px;
+}
+#bh-sl-user-location input {max-width: none !important;}
+
+.bh-sl-container .form-input input, .bh-sl-container .form-input select { border: none; margin: 0 !important;  background: #e2e3e5; }
+.bh-sl-container button { margin-top: 0 !important; }
+#bh-sl-address { float: left; clear: both; margin-right: 30px !important;; border:none; background: #e2e3e5; border-radius:0;height: 45px;}
+.scasl-field { 
+  display:none; clear: both; 
+  font-family: nunito_sansregular;
+}
+#scasl-store_image { clear: none !important; }
+
+
+#scasl-title {
+  font-weight: bold !important;
+  font-family: nunito_sansbold;
+}
+#scasl-infowindow-template,#scasl-list-template { display: none; }
+.bh-sl-container .bh-sl-loc-list .list-details{
+  margin-left: 0;
+  font-size: 14px;
+}
+.bh-sl-container .bh-sl-loc-list .list-details .list-content{
+  padding: 18px 0;
+}
+
+.search-current-location{
+  display: flex;
+  margin-bottom: 20px;
+}
+.search-form-locator{
+    display: flex;
+    width: 100%;
+    clear: both;
+    align-items: flex-end;
+}
+.search-measurement{
+  padding: 0 30px;
+}
+.bh-sl-container .bh-sl-form-container{
+  display: block !important;
+}
+#scasl-app-container button,
+#scasl-app-container label,
+#scasl-app-container .scasl-field.scasl-title {
+  font-family: 'nunito_sansbold';
+}
+#scapl-geocode-btn,
+#scasl-search-btn {
+  min-width: 155px;
+}
+#scasl-app-container label {
+  line-height: 1.93;
+  letter-spacing: 0.8px;
+}
+#scasl-app-container input,
+#scasl-app-container select,
+#scasl-app-container .scasl-field {
+  font-family: 'nunito_sansregular';
+  font-size: 16px;
+  line-height: 1.69;
+  letter-spacing: 1px;
+}
+#scasl-app-container select {
+  -webkit-appearance: none; 
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: 10px;
+  background-position: 98% center;
+}
+.bh-sl-container .bh-sl-loc-list {
+  border-left: none;
+  border-right: none;
+  border-width: 4px !important;
+}
+/*.bh-sl-container .bh-sl-loc-list:before {
+  content: "";
+  background-color: red;
+  width: 90%;
+  height: 4px;
+  top: 0;
+  left: 0;
+  position: absolute;
+}*/
+.bh-sl-container .bh-sl-loc-list::-webkit-scrollbar-track {
+  background-color: #f7f7f7;
+}
+
+.bh-sl-container .bh-sl-loc-list::-webkit-scrollbar {
+  width: 7px;
+  background-color: #f7f7f7;
+}
+
+.bh-sl-container .bh-sl-loc-list::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #5a6373;
+}
+.bh-sl-container .bh-sl-loc-list ul {
+  width: calc(100% - 20px);
+}
+.gm-style .gm-style-iw-c {
+  padding: 20px;
+  border-radius: unset;
+}
+#scasl-window-container #scasl-title,
+#scasl-phone-label {
+  text-transform: uppercase;
+  font-family: 'nunito_sansbold';
+}
+#scasl-phone-label {
+  font-size: 13px;
+}
+#scasl-description p {
+  margin: 0;
+}
+.bh-sl-container button.gm-ui-hover-effect {
+  top: 0 !important;
+  right: 0 !important;
+}
+@media (min-width: 768px){
+  #bh-sl-map-container{
+    margin-bottom: 85px !important; margin-top: 60px;
+  }
+}
+@media (max-width: 767px) and (min-width: 568px){
+  #bh-sl-map-container{
+    margin-top: 30px ;
+    margin-bottom: 40px !important;
+  }
+}
+/* Screens */
+@media screen and (max-width: 600px) {
+  .scasl-location-list, .scasl-map { width: 100% !important; }
+  .scasl-location-list {height: 300px !important;}
+    .scasl-map { margin-top: 10px; }
+    .scasl-distance label {
+      margin-bottom: 0;
+    }
+    #bh-sl-user-location .search-form-locator{
+    display: block;
+  }
+  #bh-sl-user-location .search-form-locator .form-input{
+    float: none;
+  }
+  #bh-sl-user-location .search-measurement{
+    padding: 15px 0;
+    margin: 0;
+  }
+  .bh-sl-container button{
+    float:none;
+    display: block;
+    margin: 0 auto;
+  }
+  #bh-sl-map-container{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #bh-sl-map-container .bh-sl-loc-list.scasl-location-list{
+    width: 100%;
+    order:2;
+    margin-top: 20px;
+  }
+  #bh-sl-map-container .bh-sl-map.scasl-map.bh-sl-map-open{
+    order: 1;
+    width: 100%;
+  }
+  #scasl-app-container input, #scasl-app-container select, #scasl-app-container .scasl-field {
+    font-size: 14px;
+    line-height: 1.43;
+    letter-spacing: 0;
+  }
+  .bh-sl-container .bh-sl-loc-list .list-details .list-content {
+    padding: 15px 0;
+  }
+}
+@media screen and (max-width: 767px) {
+    .scasl-search-btn button, #scapl-geocode-btn { width: calc(100% - 40px); }
+    #scapl-geocode-btn { float: none; margin-top: 15px !important; display: block; margin: 15px auto 0;}
+    #bh-sl-address { width: 100% !important; }
+    #bh-sl-user-location .search-current-location{
+      display: block;
+      width: 100%;
+    }
+    #bh-sl-user-location .search-current-location input{
+      float:none;
+    }
+}

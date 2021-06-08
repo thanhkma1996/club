@@ -1,0 +1,61 @@
+<div id="block-custom">
+    <p class="title"> {{ section.settings.text-box }} </p>
+    <div class="content-block">{{ section.settings.column_richtext }}</div>
+    {% if section.settings.image_custom_block != blank %}
+      <img src="{{section.settings.image_custom_block | img_url: '1090x'}}">
+    {% endif %}
+
+    {% if section.settings.youtube_embeded_id != blank %}
+      <iframe width="1070" height="602" src="https://www.youtube.com/embed/{{section.settings.youtube_embeded_id}}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    {% endif %}
+
+    {% if section.settings.link != blank %}
+    <a class="button-content" href="{{ section.settings.link }}">{{ section.settings.linktext }}</a>
+    {% endif %}
+</div>
+{% schema %}
+{
+  "name": "CMS block",
+  "settings": [
+    {
+      "id": "text-box",
+      "type": "text",
+      "label": "Heading",
+      "default": "Title"
+    },
+    {
+       "type": "html",
+       "id": "column_richtext",
+       "label": "Text",
+       "default": "<p>Default <em>richtext</em> <a href=\"https://example.com/\">content</a></p>"
+    },
+    {
+        "type": "image_picker",
+        "id": "image_custom_block",
+        "label": "Image"
+    },
+    {
+        "type": "text",
+        "id": "youtube_embeded_id",
+        "label": "Youtube embeded id"
+    },
+    {
+      "id": "link",
+      "type": "url",
+      "label": "Button link"
+    },
+    {
+      "id": "linktext",
+      "type": "text",
+      "label": "Button text",
+      "default": "Click here"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
