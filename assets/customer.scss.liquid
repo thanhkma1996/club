@@ -783,6 +783,11 @@ input:-internal-autofill-selected  {
     margin-bottom: 5px;
     background: #000;
 }
+
+.mobile-social {
+  display: none;
+}
+
 @media screen and (max-width: 960px){
     .footnav-item-customer .footnav-menu-link{
         max-width:60px;
@@ -820,6 +825,7 @@ input:-internal-autofill-selected  {
     }
 
     .mobile-social {
+        display: block;
         width: 100%;
         text-align: center;
         display: flex;
@@ -831,7 +837,7 @@ input:-internal-autofill-selected  {
         }
     }
 
-    .footnav-item-customer {
+    .footnav-item-customer,.footnav-item-mailchimp {
         display: none;
     }
 
@@ -864,6 +870,10 @@ input:-internal-autofill-selected  {
     .product-item-title  {
       margin: 20px 5px 11px 0;
     }
+
+    .footnav-item  {
+        width: 50%;
+    }
 }
 @media (max-width: 640px){
   #mc_embed_signup_scroll{
@@ -883,7 +893,7 @@ input:-internal-autofill-selected  {
     }
   }
 }
-@media (max-width: 1024px) and (min-width: 768px){
+@media (max-width: 1024px) and (min-width: 1023px){
   .site-footer-social{
     display:block;
     .social{
@@ -958,11 +968,8 @@ input:-internal-autofill-selected  {
   .section-instagram .insta{
     margin-bottom: 40px;
   }
-  .footnav-item{
-    width: 33%;
-  }
 }
-@media (min-width: 641px){
+@media (min-width: 1190px){
   .site-header{
     max-width: 1060px;
   }

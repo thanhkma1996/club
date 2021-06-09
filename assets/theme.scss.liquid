@@ -8598,7 +8598,7 @@
 
   //Responsive mobile tablet
 
-  @media (max-width: 1200px) and (min-width: 768px){
+  @media (max-width: 1200px) and (min-width: 991px){
     .site-header {
         max-width: 70% !important;
     }
@@ -8607,4 +8607,27 @@
             max-width: 70%;
         }
     }
+  }
+
+  @media (min-width: 641px) and (max-width: 940px) {
+      .page-template-index {
+          .site-header {
+              max-width: 80%;
+          }
+      }
+      .bigquard a:before {
+          background-image: url('icons-shopping-cart.svg') !important;
+      }
+
+      .site-actions-account a:before  {
+          top: -4px;
+      }
+
+      #mc_embed_signup_scroll #mc-embedded-subscribe {
+          width: auto !important;
+      }
+
+      .footnav-item {
+        width: 25% !important;
+     }
   }
