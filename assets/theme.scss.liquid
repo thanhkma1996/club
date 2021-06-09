@@ -548,8 +548,16 @@
            url('Montserrat-ExtraBold.woff') format('woff');
       font-weight: normal;
       font-style: normal;
-  
   }
+
+  @font-face {
+        font-family: 'Montserrat-Bold';
+        src: url('Montserrat-Bold.woff2') format('woff2'),
+            url('Montserrat-Bold.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+  }
+
 
   // Text
   $color-text-light: rgba($color-text, 0.5);
@@ -683,9 +691,14 @@
     // Text
   
     p {
-      margin-top: 24px;
-      margin-bottom: 24px;
-      color: $color-text;
+        font-size: 15px;
+        line-height: 1.73;
+        letter-spacing: normal;
+        color: $color-text;
+        margin: 0;
+        strong {
+            font-family: 'inter-semibold';
+        }
     }
   
     // Links
@@ -2325,35 +2338,6 @@
       }
     }
   }
-  
-  // Pages
-  
-  .search-result-page {
-    max-width: 540px;
-    margin-right: auto;
-    margin-left: auto;
-  
-    & + & {
-      padding-top: 32px;
-      margin-top: 32px;
-      border-top: 1px solid $color-border;
-    }
-  }
-  
-  .search-result-page-link {
-    color: inherit;
-    text-decoration: none;
-  }
-  
-  .search-result-page-title {
-    margin-top: 0;
-    font-size: 24px;
-  }
-  
-  .search-result-page-summary {
-    @extend %rte;
-  }
-  
   
   // Sections
   $local-gutter: 80px;
@@ -4429,7 +4413,7 @@
       position: relative;
       &:before{
         content:'';
-        background-image: url("icons-light-account.svg");
+        background-image: url("icons-account-black.svg");
           position: absolute;
           background-size: 27px;
           width: 40px;
@@ -5038,12 +5022,6 @@
       vertical-align: top;
     }
   
-    .product-price {
-      display: block;
-      margin-bottom: 30px;
-      font-family: $font-body;
-      font-size: 18px;
-    }
   }
   
   .product-details-sticky {
@@ -5064,12 +5042,6 @@
     .share-buttons-label {
       display: none;
     }
-  }
-  
-  .product-title {
-    font-family: $font-title;
-    font-size: 20px;
-    color: $color-title-text;
   }
   
   .product-rte {
@@ -6293,7 +6265,7 @@
       font-weight: bold;
       line-height: normal;
       letter-spacing: normal;
-      color: #ffffff;
+      color: black;
       text-decoration: none;
       text-transform: uppercase;
   
@@ -7843,15 +7815,6 @@
   }
   
   .quantity-input {
-    font-size: 12px;
-    width:30px;
-    color: $color-text;
-    text-align: center;
-    cursor: default;
-    background-color: $color-secondary-background;
-    border: 0;
-    -moz-appearance: textfield;
-  
     @include media($min: $breakpoint-l) {
       font-size: 14px;
       height:30px;
@@ -7866,46 +7829,6 @@
   
   .share-buttons-wrapper {
   /*   text-align: center; */
-  }
-  
-  .share-buttons-label {
-    display: inline-block;
-    margin-bottom: 10px;
-    font-family: $font-label;
-    line-height: 24px;
-    text-decoration: none;
-    vertical-align: middle;
-  }
-  
-  .share-buttons {
-    display: inline-block;
-    width: 100%;
-    height: 24px;
-    margin-bottom: 10px;
-    vertical-align: middle;
-  
-    a {
-      position: relative;
-      display: inline-block;
-      width: auto;
-      height: 24px;
-      margin-right: 15px;
-      color: $color-accent;
-  
-      &:hover {
-        opacity: 0.5;
-      }
-  
-      &:last-of-type {
-        margin-right: 0;
-      }
-    }
-  
-    svg {
-      display: block;
-      width: 24px;
-      height: 24px;
-    }
   }
   
   .shipping-calculator-fields {
@@ -8243,48 +8166,48 @@
     }
   }
   
-  .tweet-content {
-    @extend %rte;
-    position: relative;
-    margin-bottom: 30px;
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 1.6;
-    word-wrap: break-word;
+//   .tweet-content {
+//     @extend %rte;
+//     position: relative;
+//     margin-bottom: 30px;
+//     font-size: 15px;
+//     font-weight: 300;
+//     line-height: 1.6;
+//     word-wrap: break-word;
   
-    @include media($min: $breakpoint-s) {
-      font-size: 20px;
-    }
+//     @include media($min: $breakpoint-s) {
+//       font-size: 20px;
+//     }
   
-    @include media($min: $breakpoint-l) {
-      padding-bottom: 30px;
+//     @include media($min: $breakpoint-l) {
+//       padding-bottom: 30px;
   
-      &::after {
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        width: 40px;
-        border-bottom: 1px solid $color-border;
-        content: "";
-        -webkit-transform: translateX(-50%);
-            -ms-transform: translateX(-50%);
-                transform: translateX(-50%);
-      }
-    }
+//       &::after {
+//         position: absolute;
+//         bottom: 0;
+//         left: 50%;
+//         width: 40px;
+//         border-bottom: 1px solid $color-border;
+//         content: "";
+//         -webkit-transform: translateX(-50%);
+//             -ms-transform: translateX(-50%);
+//                 transform: translateX(-50%);
+//       }
+//     }
   
-    .link.customisable {
-      display: block;
-      height: 1.4em;
-      max-width: 100%;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
+//     .link.customisable {
+//       display: block;
+//       height: 1.4em;
+//       max-width: 100%;
+//       overflow: hidden;
+//       text-overflow: ellipsis;
+//       white-space: nowrap;
+//     }
   
-    .u-hiddenVisually {
-      display: none;
-    }
-  }
+//     .u-hiddenVisually {
+//       display: none;
+//     }
+//   }
   
   .tweet-username {
     font-size: 16px;
@@ -8472,7 +8395,6 @@
     padding:6px 15px;
   }
   .product_image img{
-    height:400px;
       margin-left:auto;
       margin-right:auto;
       display:block;
@@ -8559,6 +8481,20 @@
 
   // Home
   .page-template-index {
+    .site-navigation {
+        .navmenu-link {
+            color: #fff;
+        }
+    }
+
+    .site-actions-account a:before {
+        background-image: url('icons-light-account.svg');
+    }
+
+    .bigquard a:before  {
+        background-image: url('icons-shopping-cart.svg');
+    }
+
     .site-logo-header {
         position: relative;
         &::before {
