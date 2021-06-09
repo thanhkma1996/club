@@ -465,12 +465,12 @@
   // Internal libraries
   // Fonts
   
-  {% if settings.font_body contains 'Google_' %}
-    $font-body: {{ settings.font_body | replace: 'Google_', '' | split: ':' | first | replace: '+', ' ' }};
-  {% else %}
-    $font-body: {{ settings.font_body }};
-  {% endif %}
-  
+//   {% if settings.font_body contains 'Google_' %}
+//     $font-body: {{ settings.font_body | replace: 'Google_', '' | split: ':' | first | replace: '+', ' ' }};
+//   {% else %}
+//     $font-body: {{ settings.font_body }};
+//   {% endif %}
+
   {% if settings.font_title contains 'Google_' %}
     $font-title: {{ settings.font_title | replace: 'Google_', '' | split: ':' | first | replace: '+', ' ' }};
   {% else %}
@@ -494,68 +494,15 @@
   $color-secondary-text: $color-title-text;
   $color-secondary-background: rgba($color-title-text, 0.08);
   //font-face
-  
+
+
+  $font-body: 'inter_regular';
+  $font-label: 'Montserrat-ExtraBold';
+
   @font-face {
-      font-family: 'nunito_sansitalic';
-      src: url('nunitosans-italic-webfont.woff2') format('woff2'),
-           url('nunitosans-italic-webfont.woff') format('woff');
-      font-weight: normal;
-      font-style: normal;
-  
-  }
-  @font-face {
-      font-family: 'nunito_sanslight';
-      src: url('nunitosans-light-webfont.woff2') format('woff2'),
-           url('nunitosans-light-webfont.woff') format('woff');
-      font-weight: normal;
-      font-style: normal;
-  
-  }
-  @font-face {
-      font-family: 'nunito_sanslight_italic';
-      src: url('nunitosans-lightitalic-webfont.woff2') format('woff2'),
-           url('nunitosans-lightitalic-webfont.woff') format('woff');
-      font-weight: normal;
-      font-style: normal;
-  
-  }
-  
-  @font-face {
-      font-family: 'nunito_sanssemibold';
-      src: url('nunitosans-semibold-webfont.woff2') format('woff2'),
-           url('nunitosans-semibold-webfont.woff') format('woff');
-      font-weight: normal;
-      font-style: normal;
-  
-  }
-  @font-face {
-      font-family: 'nunito_sanssemibold_italic';
-      src: url('nunitosans-semibolditalic-webfont.woff2') format('woff2'),
-           url('nunitosans-semibolditalic-webfont.woff') format('woff');
-      font-weight: normal;
-      font-style: normal;
-  
-  }
-  @font-face {
-      font-family: 'nunito_sansregular';
+      font-family: 'inter_regular';
       src: url('Inter-Regular.woff2') format('woff2'),
            url('Inter-Regular.woff') format('woff');
-      font-weight: normal;
-      font-style: normal;
-  
-  }
-  @font-face {
-      font-family: 'nunito_sansblack';
-      src: url('nunitosans-black-webfont.woff2') format('woff2'),
-           url('nunitosans-black-webfont.woff') format('woff');
-      font-weight: normal;
-      font-style: normal;
-  
-  }
-  @font-face {
-      font-family: 'nunito_sansblack_italic';
-      src: url('nunitosans-blackitalic-webfont.woff2') format('woff2'),
-           url('nunitosans-blackitalic-webfont.woff') format('woff');
       font-weight: normal;
       font-style: normal;
   
@@ -596,44 +543,12 @@
   
   
   @font-face {
-      font-family: 'nunito_sansbold';
+      font-family: 'Montserrat-ExtraBold';
       src: url('Montserrat-ExtraBold.woff2') format('woff2'),
            url('Montserrat-ExtraBold.woff') format('woff');
       font-weight: normal;
       font-style: normal;
   
-  }
-  @font-face {
-      font-family: 'nunito_sansbold_italic';
-      src: url('nunitosans-bolditalic-webfont.woff2') format('woff2'),
-           url('nunitosans-bolditalic-webfont.woff') format('woff');
-      font-weight: normal;
-      font-style: normal;
-  
-  }
-  @font-face {
-      font-family: 'nunito_sansextrabold';
-      src: url('nunitosans-extrabold-webfont.woff2') format('woff2'),
-           url('nunitosans-extrabold-webfont.woff') format('woff');
-      font-weight: normal;
-      font-style: normal;
-  
-  }
-  @font-face {
-      font-family: 'nunito_sansextrabold_italic';
-      src: url('nunitosans-extrabolditalic-webfont.woff2') format('woff2'),
-           url('nunitosans-extrabolditalic-webfont.woff') format('woff');
-      font-weight: normal;
-      font-style: normal;
-  
-  }
-  @font-face {
-      font-family: 'nunito_sansextralight';
-      src: url('nunitosans-extralight-webfont.woff2') format('woff2'),
-           url('nunitosans-extralight-webfont.woff') format('woff');
-      font-weight: normal;
-      font-style: normal;
-
   }
 
   // Text
@@ -2115,7 +2030,7 @@
   // instagram
   #insta-feed h2 {
       margin-bottom: 54px !important;
-      font-family: 'nunito_sansbold' !important;
+      font-family: 'Montserrat-ExtraBold' !important;
       font-size: 28px !important;
   }
   
@@ -2125,14 +2040,14 @@
       max-width:100%;
       margin: 65px auto 0 auto;
       &.section-featured-products {
-          max-width: 1060px;
+          max-width: 1070px;
         }
   
       @include media($min: $breakpoint-l) {
         padding-bottom: 0;
         margin-top: 65px;
         &.section-featured-products {
-          max-width: 1060px;
+          max-width: 1070px;
           margin-top: 70px;
         }
       }
@@ -2874,7 +2789,7 @@
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    max-width:1060px;
+    max-width:1070px;
     margin-left:auto;
     margin-right:auto;
     -webkit-align-items: center;
@@ -3071,11 +2986,11 @@
     }
   
     @include media($min: $breakpoint-l) {
-      -webkit-flex-basis: 48.5%;
-          -ms-flex-preferred-size:48.5%;
-              flex-basis:48.5%;
-      padding: 0 20px;
-      margin:0;
+      -webkit-flex-basis: 47%;
+          -ms-flex-preferred-size:47%;
+              flex-basis:47%;
+      padding: 0;
+      margin:0 20px;
       .footnav-count-1 &,
       .footnav-count-2 &,
       .footnav-count-3 & {
@@ -3452,7 +3367,7 @@
     padding-right:0;
     text-align:right;
     font-size: 16px;
-      font-family: nunito_sansbold;
+      font-family: Montserrat-ExtraBold;
   }
   
   .cart-form-button-checkout-no-js {
@@ -3501,7 +3416,7 @@
     .collection-header-no-image & {
       display: block;
       width: 100%;
-      padding: 35px 35px 40px;
+      padding: 57px 35px 40px;
   
       margin-right: auto;
       margin-bottom: 0;
@@ -3529,12 +3444,15 @@
   }
   
   .collection-title {
-    margin-top: 0;
-    line-height: 32px;
-    color: #a19061;
-    text-transform: lowercase;
-    font-size:70px;
-    font-weight: NORMAL;
+        font-family:  $font-label;
+        font-size: 40px;
+        font-weight: 800;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 8px;
+        text-align: center;
+        color: #000000;
   }
   
   .collection-image {
@@ -3651,8 +3569,6 @@
   
   .collection-grid {
     @extend %clearfix;
-    width: calc(100% + 32px);
-    margin-left: -16px;
   
     .pagination {
       display: block;
@@ -3664,16 +3580,8 @@
   .collection-grid-item {
     display: block;
     float: left;
-    width: calc(50% - 32px);
-    margin: 0 16px 40px;
-  
-    @include media($min: $breakpoint-s) {
-      width: calc(33.33% - 32px);
-    }
-  
-    @include media($min: $breakpoint-l) {
-      width: calc(25% - 32px);
-    }
+    width: 33%;
+    margin: 0 3px 72px 0;
   
     .collection-grid-uninit & {
       display: inline-block;
@@ -4129,8 +4037,6 @@
   
   .site-header {
     @extend %layout-container-outer;
-    font-family: 'nunito_sanssemibold';
-    color: $color-title-text;
   }
   .page-template-index{
     @include media($min: $breakpoint-s){
@@ -4211,7 +4117,7 @@
   // Navigation
   
   .site-navigation {
-      margin-left: 45px;
+      margin-left: 35px;
     -webkit-flex-basis: 1%;
         -ms-flex-preferred-size: 1%;
             flex-basis: 1%;
@@ -4230,7 +4136,7 @@
       -webkit-order: 1;
           -ms-flex-order: 1;
               order: 1;
-      margin-left: -15px;
+      margin: 0 auto;
     }
   
     .ie9 & {
@@ -4529,7 +4435,7 @@
           width: 40px;
           background-repeat: no-repeat;
           height: 40px;
-          left: 0;
+          left: -12px;
           top: 1px;
       }
     }
@@ -5920,7 +5826,7 @@
         color:darkgray;
       }
       .digital_outlook{
-            font-family: nunito_sansbold;
+            font-family: Montserrat-ExtraBold;
         color: darkgray;
       }
     }
@@ -5934,7 +5840,7 @@
             margin-right: 16px;
             margin-top: 12px;
             span {
-              font-family: 'nunito_sansbold';
+              font-family: 'Montserrat-ExtraBold';
               font-size: 16px;
               font-weight: 800;
               font-stretch: normal;
@@ -6291,7 +6197,7 @@
       -webkit-flex-wrap: wrap;
           -ms-flex-wrap: wrap;
               flex-wrap: wrap;
-      padding: 0;
+      justify-content: center;
     }
   
     .navmenu-depth-1 {
@@ -7058,7 +6964,7 @@
       .product-highlights-count-5 & {
         @include media($min: $breakpoint-l) {
           width: 33%;
-          margin: 0 3px 72px 0;
+          margin: 0 3px 50px 0;
           &:nth-child(3n+3) {
               margin-right: 0;
           }
@@ -7199,7 +7105,7 @@
     text-align: center;
     color: #232323;
     text-transform: uppercase;
-    margin: 69px 5px 11px 0;
+    margin: 25px 5px 11px 0;
     a {
       font-family: $font-label;
       font-size: 18px;
@@ -7229,7 +7135,6 @@
   }
   
   .product-item-price.product-price {
-      font-size: 14px;
       font-size: 16px;
       font-weight: normal;
       line-height: normal;
@@ -8607,6 +8512,19 @@
             max-width: 70%;
         }
     }
+    .page-template-collection {
+        .site-header {
+            max-width: 100% !important;
+            margin: 0 50px;
+        }
+        #shopify-section-static-collection {
+            margin: 0 50px;
+        }
+        .site-footer-item {
+            max-width: 100%;
+            margin: 0 50px;
+        }
+    }
   }
 
   @media (min-width: 641px) and (max-width: 940px) {
@@ -8627,7 +8545,75 @@
           width: auto !important;
       }
 
+      #shopify-section-static-collection {
+            margin: 0 15px 0 35px !important; 
+            .collection-grid-item, .search-results-product {
+                width: 32%;
+            }
+      }
+
       .footnav-item {
         width: 25% !important;
      }
+  }
+
+  // Home
+  .page-template-index {
+    .site-logo-header {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            background-image: url('logo-home.svg') ;
+            width: 81px;
+            height: 81px;
+            top: 0;
+            background-repeat: no-repeat;
+        }
+    }
+  }
+
+  // Product list page
+  .page-template-collection {
+        .site-navigation {
+            .navmenu-link {
+                color: #000;
+            }
+        }
+        .site-actions-account {
+            a:before {
+                background: url('icons-account-black.svg') no-repeat;
+            }
+        }
+
+        .bigquard a:before {
+            background-image: url('icons-shopping-cart-black.svg') !important;
+        }
+
+        .site-footer-social  {
+            padding: 45px 0 38px 0;
+        }
+        
+  }
+
+  @media (max-width: 640px) {
+      
+    .page-template-collection {
+        .collection-title {
+            font-size: 22px;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: normal;
+            letter-spacing: 4px;
+            text-align: center;
+            color: #000000;
+            font-family: $font-label;
+        }
+
+        .collection-grid-item, .search-results-product  {
+            width: 100%;
+            height: auto !important;
+        }
+    }
+
   }

@@ -72,7 +72,7 @@
     
    {%- assign modulop=index_based_on_page | modulo: 4.0 -%}
      {% if modulop == 0.0 and products.count > 4 %}
-    	<div class="hr_product"></div>
+    	<!-- <div class="hr_product"></div> -->
 	{% endif %}
       {%- for block in section.blocks -%}
         {%- assign block_index = block.settings.index | times: 1 -%}
