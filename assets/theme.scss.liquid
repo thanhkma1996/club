@@ -2798,7 +2798,7 @@
         -ms-flex-pack: justify;
             justify-content: space-between;
     width: 100%;
-    padding: 78px 0 38px 0;
+    padding: 15px 0 38px 0;
   
     @include media($max: $breakpoint-s) {
       -webkit-flex-wrap: wrap;
@@ -3242,7 +3242,7 @@
     width: 100%;
     margin-top:0;
     margin-bottom: 45px;
-    font-family: nunito_sansextralight;
+    font-family: 'Montserrat-ExtraBold';
     font-size: 70px;
     text-align: center;
     color:#a19061;
@@ -5009,7 +5009,7 @@
   .product-details {
     display: block;
     width: 100%;
-    padding: 30px;
+    padding: 0 30px;
   
     @include media($min: $breakpoint-s) {
       padding: 35px 20px 35px 0;
@@ -5059,30 +5059,21 @@
   }
   
   .section-related-products {
-    position: relative;
-    padding: 40px 20px 50px;
-    margin-top: 70px;
-    overflow-x: hidden;
-    border-top: 1px solid $color-border;
-  
-    @include media($min: $breakpoint-s) {
-      padding: 60px 20px 50px;
-    }
-  
-    @include media($min: $breakpoint-l) {
-      padding: 60px 0 50px;
-    }
+    position: relative; 
+    padding: 40px 0 0;
   }
   
   .related-products-title {
     display: block;
-    margin-bottom: 40px;
-    font-family: $font-title;
-    font-size: 27px;
-    font-weight: bold;
-    letter-spacing: 0.5px;
-    text-align: center;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.56;
+    letter-spacing: normal;
+    color: #232323;
+    font-family: 'Montserrat-ExtraBold';
     text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 57px;
   }
   
   
@@ -5619,7 +5610,7 @@
     //display: block;
     font-size:16px;
       margin-right:5px;
-    font-family: nunito_sansextralight;
+    font-family: 'Montserrat-ExtraBold';
     @include media($min: $breakpoint-l) {
       display: inline-block;
     }
@@ -6929,7 +6920,8 @@
   
       .product-highlights-count-4 & {
         @include media($min: $breakpoint-l) {
-          width: calc(25% - 30px);
+            width: 33%;
+            margin: 0 3px 50px 0;
         }
       }
   
@@ -8398,6 +8390,7 @@
       margin-left:auto;
       margin-right:auto;
       display:block;
+      height: 692px;
   }
   .push_product:hover{
     background:#948459;
@@ -8553,3 +8546,24 @@
     }
 
   }
+
+  @media (min-width: 960px) {
+       .page-template-index {
+            .slideshow {
+              .fluid-width-video-wrapper {
+                      display: none;
+                }
+            }
+       }
+  }
+
+  @media (max-width: 959px) {
+    .page-template-index {
+         .slideshow {
+              .slideshow-slide-imager img{
+                   display: none;
+             }
+         }
+    }
+  }
+

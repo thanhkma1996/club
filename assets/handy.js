@@ -13618,10 +13618,10 @@ Flickity.prototype._create = function() {
   this.accel = 0;
   this.originSide = this.options.rightToLeft ? 'right' : 'left';
   // create viewport & slider
-//   this.viewport = document.createElement('div');
-//   this.viewport.className = 'flickity-viewport';
-//   Flickity.setUnselectable( this.viewport );
-//   this._createSlider();
+  this.viewport = document.createElement('div');
+  this.viewport.className = 'flickity-viewport';
+  Flickity.setUnselectable( this.viewport );
+  this._createSlider();
 
   if ( this.options.resize || this.options.watchCSS ) {
     eventie$$1.bind( window, 'resize', this );
