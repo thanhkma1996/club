@@ -277,9 +277,6 @@ input:-internal-autofill-selected  {
   	margin-top:0 !important;
     font-size:40px !important;
   }
-  .product-form-inline .share-buttons-label{
-  	margin-right:15px;
-  }
   .template-account-register-title{
   	font-size:40px!important;
   }
@@ -343,10 +340,6 @@ input:-internal-autofill-selected  {
   }
   .index-wrapper .shopify-section,.site-footer,#shopify-section-static-collection{
   	max-width: 100%!important;
-  }
-  .product-form-inline .share-buttons-label .share-button{
-  	left:unset !important;
-    right:-80%;
   }
   .cart_product_quantity label{
   	padding:6px 10px;
@@ -519,20 +512,6 @@ input:-internal-autofill-selected  {
 .show_products_popup_cart .cart-items .cart-item-image{
 	display:none;
 }
-.product-form-inline{
-	.share-buttons{
-
-  		text-align:center;
-	}
-	.share-buttons-label{
-		padding-top:1%;
-      	float:right;
-      	text-transform: uppercase;
-
-
-	}
-
-}
 .product-form-inline-atc-button{
 
   	margin-top:5%;
@@ -673,7 +652,7 @@ input:-internal-autofill-selected  {
     }
 
     #shopify-product-reviews {
-        padding: 50px 50px 30px 50px;
+        padding: 0px 50px 30px 50px;
         border: none;
         .spr-container {
             border: none !important;
@@ -782,6 +761,7 @@ input:-internal-autofill-selected  {
             .fluid-width-video-wrapper {
                 margin-right: 25px;
                 max-width: 84px;
+                padding-top: 150px !important;
                 iframe {
                   height: 84px;
                 }
@@ -792,7 +772,7 @@ input:-internal-autofill-selected  {
               line-height: 1.73;
               letter-spacing: normal;
               color: #2d2d2d;
-              margin-top: 21px;
+              margin-top: 13px;
               font-family: 'inter_regular';
             }
         }
@@ -826,7 +806,7 @@ input:-internal-autofill-selected  {
         }
 
         .product-form-inline-atc {
-            margin-top: 30px;
+            margin-top: 34px;
         }
 
         .product-form-inline {
@@ -897,21 +877,21 @@ input:-internal-autofill-selected  {
     from {opacity: 0;}
     to {opacity:1 ;}
 }
-.product-form-inline .share-buttons-label .share-button{
-	 visibility: hidden;
-    width: max-content;
-  	width: -moz-max-content;
-/*     background-color: #555; */
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: -200%;
+// .product-form-inline .share-buttons-label .share-button{
+// 	 visibility: hidden;
+//     width: max-content;
+//   	width: -moz-max-content;
+// /*     background-color: #555; */
+//     color: #fff;
+//     text-align: center;
+//     border-radius: 6px;
+//     padding: 8px 0;
+//     position: absolute;
+//     z-index: 1;
+//     bottom: 125%;
+//     left: -200%;
 
-}
+// }
 .product-form-inline .share-buttons{
 	display:none;
 }
@@ -1050,6 +1030,19 @@ input:-internal-autofill-selected  {
   }
 }
 @media (max-width: 1024px) and (min-width: 1023px){
+  // PDP
+  .section-related-products {
+     margin: 0 50px;
+  }
+
+  #shopify-section-static-product {
+     margin: 0 50px;
+     .product-images {
+        width: 50%;
+        margin-right: 50px;
+     }
+  }
+
   .site-footer-social{
     display:block;
     .social{
@@ -1057,7 +1050,7 @@ input:-internal-autofill-selected  {
     }
   }
   .site-footer-item  {
-    margin: 0 auto;
+    margin: 0 50px;
   }
   .footnav{
     display: block;
@@ -1163,6 +1156,18 @@ input:-internal-autofill-selected  {
                   letter-spacing: normal;
               }
 
+              .link_product {
+                  margin-top: 0;
+                  .fluid-width-video-wrapper {
+                      margin-right: 21px;
+                      padding-top: 115px !important;
+                  }
+
+                  a {
+                      margin-top: 0;
+                  }
+              }
+
               .quantity-input {
                 font-size: 18.2px;
                 font-weight: 600;
@@ -1191,6 +1196,12 @@ input:-internal-autofill-selected  {
                       margin-top: 4px;
                       margin-right: 0;
                       font-family: 'inter_regular';
+                      .share-button {
+                          display: none;
+                          &.show {
+                            display: block;
+                          }
+                      }
                  }
 
                  .button_addtocart_detail  {
@@ -1266,7 +1277,7 @@ input:-internal-autofill-selected  {
 
   @media (min-width: 940px) and (max-width: 1200px) {
      #shopify-section-static-product,.site-footer {
-          max-width: 74%;
+          // max-width: 74%;
      }
   }
 
