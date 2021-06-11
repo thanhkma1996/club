@@ -123,12 +123,12 @@
   },
   "cart": {
     "notes": "Special instructions",
-    "title": "your cart",
+    "title": "My cart",
     "view_cart": "View cart",
     "totals": {
       "subtotal_title": "Subtotal"
     },
-    "empty": "Your cart is currently empty",
+    "empty": "My cart is currently empty",
     "button_calculate_shipping_title": "Calculate shipping",
     "button_checkout_title": "Checkout",
     "button_cancel_shipping_title": "Cancel",
