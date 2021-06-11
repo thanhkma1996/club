@@ -8,12 +8,9 @@
 		<div id="scasl-tab-radius">
 			<form id="bh-sl-user-location" class="scasl-distance" method="post" action="#">
 				<div class="form-input">
-					<label for="bh-sl-address">Current Location</label>
+					<label for="bh-sl-address">Location</label>
                   	<div class="scasl-address-wrap">
                         <input type="text" id="bh-sl-address" name="bh-sl-address" />
-                      	<a href="#" id="scapl-geocode-btn" title="Find My Location" style="background-color: none !important">
-                            <img src="{{ 'sca.location-find-location.png' | asset_url }}">
-                        </a>
                         <button id="scapl-geocode-btn" type="button">Find My Location</button>
                     </div>
 				</div>
@@ -33,19 +30,17 @@
                       </select>
                   </div>
 
+                  <div class="scasl-search-btn">
+                    <button id="bh-sl-submit" type="submit">Search</button>
+                  </div>
+
                   <div class="bh-sl-filters-container scasl-tag">
                       <label for="scasl-tag-list-container">Tags</label>
                       <ul id="scasl-tag-list-container" class="bh-sl-filters scasl-tag-list">
                       </ul>
                   </div>
                 </div>
-
-              	<a class="scasl-see-more">More &raquo;</a>
-              	<a class="scasl-see-less">Less &laquo;</a>
-
-				<div class="scasl-search-btn">
-					<button id="bh-sl-submit" type="submit">Search</button>
-				</div>
+			
 			</form>
 			<div class="spinner">
 	            <div class="double-bounce1"></div>

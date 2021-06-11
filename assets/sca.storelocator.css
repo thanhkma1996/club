@@ -23,15 +23,59 @@
   max-width: 100%;
 }
 #scasl-app-container #page-header .bh-sl-title{
-    font-family: nunito_sansextralight;
-    font-size: 30px;
-    margin-top: 0;
-    line-height: 32px;
-    color: #a19061;
-    text-transform: lowercase;
-    font-size: 70px;
-    font-weight: 100;
+    font-family: 'Montserrat-ExtraBold';
+    font-size: 40px;
+    letter-spacing: 8px;
     text-align: center;
+    color: #000000;
+    text-transform: uppercase;
+    margin-bottom: 58px;
+}
+
+.scasl-address-wrap  {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.scasl-address-wrap input {
+    width: 87% !important;
+    background: none !important;
+}
+
+button#scapl-geocode-btn  {
+  background: #5a6373 !important;
+}
+
+.scasl-see-more-content {
+    display: flex;
+    width: 100%;
+    clear: both;
+    align-items: flex-end;
+}
+
+#scapl-geocode-btn {
+    width: 251px;
+}
+
+.scasl-see-more-content  .form-input {
+  width: 53.5% !important;
+  margin-right: 22px;
+  max-width: 433px;
+}
+
+.scasl-search-btn button {
+    background: #000000 !important;
+    width: 211px;
+    font-weight: normal;
+}
+
+#bh-sl-submit {
+    background: #d2d2d2 !important;
+    max-width: 251px;
+}
+
+#scasl-tabs,.scasl-tag,.scasl-see-more,.scasl-see-less {
+    display: none;
 }
 
 @media(max-width: 959px){
@@ -53,7 +97,7 @@
   font-family: nunito_sansregular; 
   font-weight: 500 !important;
   color: #263147;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 .scasl-distance { display: inline-block; margin: 0; }
 .scasl-container .form-input input, .scasl-container .form-input select { height: 35px; background-color: #fff; }
@@ -74,13 +118,22 @@
   border-right: 0 !important;
   border-top: 0 !important;
 }
-.scasl-location-list { width: 39% !important; }
-.scasl-map { float: right !important; width: 59% !important; }
-.scasl-search-btn button, #scapl-geocode-btn { background: #30ABD9; height: 34px; 
+.scasl-location-list { width: 40% !important; }
+.scasl-map { 
+  float: right !important;
+   width: 57%!important;
+  margin-left: 10px;
+}
+.scasl-search-btn button, #scapl-geocode-btn { 
+  height: 42px; 
   border-radius: 0;
-  padding: 5.5px 20px;
+  padding: 0 20px;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: normal;
+  font-family: 'inter_regular';
+  background: #000000 !important;
+  max-width: 251px;
 }
 #scapl-geocode-btn { float: right; }
 .scasl-list-image, .scasl-info-image { float: right; }
@@ -90,7 +143,7 @@
 .scasl-info-location, .scasl-location-list { float: left; }
 .scasl-tags { background: url("//secomapp.com/storelocator/assets/cdn/img/tag.png") no-repeat scroll 0 1px transparent; padding: 2px 10px 0 16px; float: left;background-position-y:4px;}
 .bh-sl-container .form-input, .bh-sl-container .form-input input, .bh-sl-container .form-input select { 
-  width: 100% !important; 
+  width: 100%;
   opacity: 1 !important; 
   border-radius: 0;
   color:#263147;
@@ -100,7 +153,7 @@
 }
 #bh-sl-user-location input {max-width: none !important;}
 
-.bh-sl-container .form-input input, .bh-sl-container .form-input select { border: none; margin: 0 !important;  background: #e2e3e5; }
+.bh-sl-container .form-input input, .bh-sl-container .form-input select { border: none; margin: 0 !important;}
 .bh-sl-container button { margin-top: 0 !important; }
 #bh-sl-address { float: left; clear: both; margin-right: 30px !important;; border:none; background: #e2e3e5; border-radius:0;height: 45px;}
 .scasl-field { 
@@ -121,6 +174,9 @@
 }
 .bh-sl-container .bh-sl-loc-list .list-details .list-content{
   padding: 18px 0;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.63;
 }
 
 .search-current-location{
@@ -142,24 +198,27 @@
 #scasl-app-container button,
 #scasl-app-container label,
 #scasl-app-container .scasl-field.scasl-title {
-  font-family: 'nunito_sansbold';
+  font-family: 'inter_regular';
 }
 #scapl-geocode-btn,
 #scasl-search-btn {
   min-width: 155px;
 }
 #scasl-app-container label {
-  line-height: 1.93;
-  letter-spacing: 0.8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #232323;
+  font-family: 'inter-medium';
 }
 #scasl-app-container input,
 #scasl-app-container select,
 #scasl-app-container .scasl-field {
-  font-family: 'nunito_sansregular';
+  font-family: 'inter_regular';;
   font-size: 16px;
-  line-height: 1.69;
-  letter-spacing: 1px;
+  font-weight: 400 !important;
+  letter-spacing: normal;
 }
+
 #scasl-app-container select {
   -webkit-appearance: none; 
   -moz-appearance: none;
@@ -173,6 +232,12 @@
   border-left: none;
   border-right: none;
   border-width: 4px !important;
+}
+
+.bh-sl-container {
+    float: none;
+    max-width: 1070px;
+    margin: 0 auto;
 }
 /*.bh-sl-container .bh-sl-loc-list:before {
   content: "";
@@ -220,7 +285,8 @@
 }
 @media (min-width: 768px){
   #bh-sl-map-container{
-    margin-bottom: 85px !important; margin-top: 60px;
+    margin-bottom: 85px !important; 
+    margin-top: 73px;
   }
 }
 @media (max-width: 767px) and (min-width: 568px){
@@ -231,6 +297,49 @@
 }
 /* Screens */
 @media screen and (max-width: 600px) {
+  /* //Resposive mobile  */
+  #scasl-app-container #page-header .bh-sl-title {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 4px;
+      margin: 20px 10px 10px 10px;
+  }
+
+  .bh-sl-container .form-input input, .bh-sl-container .form-input select {
+      margin-bottom: 18px !important;
+  }
+
+  .form-input {
+      margin-bottom: 10px;
+  }
+
+  #scasl-app-container label  {
+    margin-bottom: 7px;
+  }
+
+  .scasl-address-wrap  {
+      display: block;
+  }
+
+  .scasl-address-wrap button {
+      width: calc(100% - 40px);
+      max-width: 100% !important;
+  }
+
+  .scasl-see-more-content .form-input {
+      width: 100% !important;
+      margin: 0 0 1px 0;
+  }
+
+  .scasl-see-more-content {
+      display: block;
+  }
+
+  .scasl-see-more-content button {
+      width: calc(100% - 40px);
+      max-width: 100% !important;
+  }
+
   .scasl-location-list, .scasl-map { width: 100% !important; }
   .scasl-location-list {height: 300px !important;}
     .scasl-map { margin-top: 10px; }
@@ -255,20 +364,21 @@
   #bh-sl-map-container{
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 32px;
   }
   #bh-sl-map-container .bh-sl-loc-list.scasl-location-list{
     width: 100%;
     order:2;
-    margin-top: 20px;
+    margin-top: 40px;
   }
   #bh-sl-map-container .bh-sl-map.scasl-map.bh-sl-map-open{
     order: 1;
     width: 100%;
+    margin: 0;
   }
   #scasl-app-container input, #scasl-app-container select, #scasl-app-container .scasl-field {
-    font-size: 14px;
-    line-height: 1.43;
-    letter-spacing: 0;
+    font-size: 16px;
+    margin-right: 0 !important;
   }
   .bh-sl-container .bh-sl-loc-list .list-details .list-content {
     padding: 15px 0;
