@@ -49,8 +49,7 @@
 
         <div class="contactbar-item">
           <a class="contactbar-item-link" href="{{ phone_url }}">
-            <div class="contactbar-item-icon">{% include 'icon', id: 'contact-phone' %}</div>
-            <div class="contactbar-item-label">{{ 'phone_title' | t }}</div>
+            <div class="contactbar-item-icon phone"></div>
             <div class="contactbar-item-value">{{ section.settings.phone_value | escape }}</div>
           </a>
         </div>
@@ -59,8 +58,7 @@
       {% if section.settings.email_value != blank %}
         <div class="contactbar-item">
           <a class="contactbar-item-link" href="mailto:{{ section.settings.email_value | escape }}">
-            <div class="contactbar-item-icon">{% include 'icon', id: 'contact-email' %}</div>
-            <div class="contactbar-item-label">{{ 'email_title' | t }}</div>
+            <div class="contactbar-item-icon email"></div>
             <div class="contactbar-item-value">{{ section.settings.email_value | escape }}</div>
           </a>
         </div>

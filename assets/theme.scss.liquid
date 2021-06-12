@@ -1167,7 +1167,9 @@
   
   %form-input {
     padding: 15px;
-    font-family: $font-label;
+    font-family: 'inter_regular';
+    font-size: 16px;
+    color: #000000;
     color: $color-title-text;
     background: transparent;
     border: 1px solid $color-border;
@@ -1196,7 +1198,7 @@
       display: block;
       width: 100%;
       margin-top: 10px;
-      margin-bottom: 30px;
+      margin-bottom: 15px;
       line-height: 1.6;
     }
   
@@ -1205,7 +1207,7 @@
     }
   
     label {
-      font-family: $font-label;
+      font-family: 'Inter-Medium';
     }
   
     textarea {
@@ -1217,8 +1219,8 @@
   
     input[type="submit"] {
       @extend %button;
-      height: 50px;
-      min-width: 150px;
+      height: 60px;
+      min-width: 160px;
     }
   
     .button {
@@ -2091,15 +2093,9 @@
   }
   
   .page-contact {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
     margin-bottom: 80px;
-  
-    @include media($max: $breakpoint-s) {
-      display: block;
-    }
-  
+    max-width: 524px;
+    margin: 0 auto;
     .contact-form {
       @extend %form;
       -webkit-flex-basis: 100%;
@@ -2109,7 +2105,6 @@
           -ms-flex-negative: 1;
               flex-shrink: 1;
       min-height: 590px;
-      padding: 32px 38px 32px 0;
       background: rgba($color-border, 0.25);
   
       .input-field.error {
@@ -3649,15 +3644,6 @@
   $local-contactbar-height: 60px;
   
   // All breakpoints
-  
-  .contactbar-item-link {
-    font-size: 11px;
-    font-weight: 300;
-    color: inherit;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
-  
   .contactbar-item-icon {
     width: 20px;
     height: 20px;
@@ -3685,7 +3671,6 @@
   
   %contactbar-items {
     .contactbar-items {
-      padding: 40px 40px;
       font-size: 0;
       text-align: center;
       vertical-align: middle;
@@ -3745,6 +3730,7 @@
   
     .contactbar-item-link {
       display: inline-block;
+      text-decoration:none;
     }
   
     .contactbar-item-link[href="#"] {
@@ -3752,13 +3738,28 @@
     }
   
     .contactbar-item-icon {
-      position: absolute;
-      top: 50%;
-      left: 20px;
-      color: $color-accent;
-      -webkit-transform: translateY(-50%);
-          -ms-transform: translateY(-50%);
-              transform: translateY(-50%);
+      svg {
+          display: none;
+      }
+      position: relative;
+      &::before {
+        content:'';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+      }
+
+      &.email:before {
+        background: url('mail-contact.png') no-repeat;
+        top: 24px;
+        left: -21px;
+      }
+
+      &.phone:before {
+        background: url('icon-call.svg') no-repeat;
+        top: 22px;
+        left: -22px;
+      }
     }
   
     .contactbar-item-label {
@@ -3766,7 +3767,11 @@
     }
   
     .contactbar-item-value {
-      letter-spacing: 1.1px;
+      font-size: 16px;
+      line-height: 1.63;
+      letter-spacing: normal;
+      color: #2d2d2d;
+      font-family: 'inter_regular';
   
       p {
         margin-top: 5px;
@@ -3867,7 +3872,7 @@
     }
   
     .contactbar-item-value {
-      margin-left: 30px;
+      margin-left: 23px;
     }
   }
   
@@ -6155,14 +6160,13 @@
   }
   
   .masthead-title {
-    margin-top: 0;
-    line-height: 32px;
-    color: #a19061;
-    text-transform: lowercase;
-    font-size: 70px;
-    font-weight: NORMAL;
+    font-size: 40px;
+    line-height: normal;
+    letter-spacing: 8px;
     text-align: center;
-    position: relative;
+    color: #000000;
+    font-family: 'Montserrat-ExtraBold';
+    text-transform: uppercase;
   }
   
   .masthead-subtitle {
@@ -8895,4 +8899,62 @@
         #scasl-tabs {
             display: none;
         }
+  }
+
+  // Contact page 
+  body.page-template-page\.contact {
+      .masthead {
+          margin-top: 86px
+      }
+
+      .page-contact-contactbar {
+        margin: 85px 0 116px 0;
+      }
+
+      #contact-message {
+          min-height: 161px;
+      }
+
+      .contact-submit {
+          text-align: center;
+          margin-top: 55px;
+      }
+  }
+
+  @media (max-width: 640px) {
+    body.page-template-page\.contact {
+        .masthead {
+            margin: 0;
+            .masthead-title {
+                margin: 20px 0 30px 0;
+                font-size: 22px;
+                letter-spacing: 4px;
+            }
+        }
+        .page-contact {
+            display: flex;
+            flex-wrap:wrap;
+            .page-contact-contactbar {
+                order: 1;
+                margin: 65px 0 98px 0;
+                flex-basis: 100%;
+                padding-left: 30px;
+            }
+            form {
+                order: 0;
+                label {
+                    font-size: 15px;
+                }
+            }
+        }
+       
+        .page-contact-contactbar {
+          .contactbar-item-icon {
+              &.phone:before,&.email:before {
+                  left: 0;
+              }
+          }
+        }
+
+    }
   }

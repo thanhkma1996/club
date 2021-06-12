@@ -11,6 +11,7 @@
   {% endunless %}
 
   <div class="page-contact">
+    <div class="page-contact-contactbar" data-contactbar-page-target></div>
     {% form 'contact' %}
       {% if form.posted_successfully? %}
         <p class="success-message">
@@ -60,11 +61,12 @@
             class="input-field {% if form.errors contains 'comments' %}error{% endif %}"
           >{{ form.comments }}</textarea>
         </div>
-
-        <input class="contact-form-submit" type="submit" value="{{ 'contact.form.submit' | t }}">
+        <div class="contact-submit">
+            <input class="contact-form-submit" type="submit" value="{{ 'contact.form.submit' | t }}">
+        </div>
       {% endif %}
     {% endform %}
 
-    <div class="page-contact-contactbar" data-contactbar-page-target></div>
+    
   </div>
 </article>
