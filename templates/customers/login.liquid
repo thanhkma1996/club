@@ -1,6 +1,7 @@
 <div class="page-content template-account-login">
 
   <h1 class="template-account-login-title">{{ 'customers.login.header' | t }}</h1>
+  <h1 class="template-account-login-title-forgot-pw">{{ 'customers.resetpw.header' | t }}</h1>
 
   <article class="template-account-login-forms" data-login-forms>
     <div class="account-recovery">
@@ -29,21 +30,21 @@
           {% endif %}
         </div>
 
-        <div class="input-wrapper">
+        <div class="btn-resetpw">
           <input
             class="button"
             type="submit"
             value="{{ 'customers.reset_password.submit' | t }}">
         </div>
 
-        <p>
+        <!-- <p>
           <a
             class="account-recovery-toggle"
             href="#"
             data-toggle-account-recovery>
             {{ 'general.form.cancel' | t }}
           </a>
-        </p>
+        </p> -->
       {% endform %}
     </div>
     <div class="account-login">
@@ -86,7 +87,7 @@
             name="customer[password]">
         </div>
 
-        <div class="input-wrapper">
+        <div class="submit-button">
           <input
             class="button"
             type="submit"

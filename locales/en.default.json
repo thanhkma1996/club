@@ -8,6 +8,7 @@
     "form": {
       "first_name": "First name",
       "last_name": "Last name",
+      "business_name":"Business name",
       "name": "Name",
       "name_placeholder": "Your name",
       "email": "Email address",
@@ -24,7 +25,7 @@
       "country": "Country",
       "province": "State\/Province",
       "zip": "Zip\/Postal Code",
-      "phone": "Phone",
+      "phone": "Phone number",
       "cancel": "Cancel",
       "submit": "Submit",
       "apply": "Apply",
@@ -83,13 +84,13 @@
       "logout": "logout"
     },
     "reset_password": {
-      "submit": "Recover password",
+      "submit": "Reset password",
       "header": "Reset password",
       "message": "Reset password for {{ user }}"
     },
     "register": {
       "header": "sign up",
-      "submit": "register"
+      "submit": "create account"
     },
     "new_customer": {
       "header": "New customer?",
@@ -111,10 +112,13 @@
       "discounts": "Discount ({{ code }})"
     },
     "login": {
-      "header": "sign in",
+      "header": "stockist sign in",
       "forgot_your_password": "Forgot your password?",
-      "recover_password_message": "We'll send you an email to reset your password.",
+      "recover_password_message": "We'll send you an email with a link to reset your password.",
       "submit": "Login"
+    },
+    "resetpw": {
+      "header": "reset your password"
     },
     "guest_checkout": {
       "header": "Guest checkout",

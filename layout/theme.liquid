@@ -42,17 +42,27 @@
       if(window.Shopify&&window.Shopify.designMode)document.documentElement.className+=' in-theme-editor';
     </script>
 
+    <!-- CSS for page -->
     {% include 'google-fonts', fonts: 'font_title|font_body|font_label' %}
     {{ 'theme.scss.css' | asset_url | stylesheet_tag }}
+    {{ 'account.scss.css' | asset_url | stylesheet_tag }}
     {{ 'customer.scss.css' | asset_url | stylesheet_tag }}
     {{ 'slick.css' | asset_url | stylesheet_tag }}
     {{ 'custom.scss.css' | asset_url | stylesheet_tag }}
 
+    <!-- // add jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Global site tag (gtag.js) - Google Ads: 665208553 --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-665208553"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-665208553'); </script>
-    
+    {{ 'test-custom.js' | asset_url | script_tag }}
+   
 </head>
 
   <body class="page-template-{{ template | replace: '_', '-' }}">
+      <script type="text/javascript">
+          $('#insta-feed h2').click(function(){
+            $(this).addClass('active');
+          });
+       </script>
     {% if template contains 'password' %}
       <main class="site-main">
         {{ content_for_layout }}
