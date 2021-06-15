@@ -71,7 +71,7 @@
       }
     },
     "account": {
-      "header": "my account",
+      "header": "account overview",
       "order_history": "Order history",
       "order": "Order",
       "payment": "Payment",
@@ -81,6 +81,10 @@
       "view_addresses": "View addresses ({{ count }})",
       "empty": "You have no orders",
       "new_address_link": "Add new address",
+      "acc_information": "Account Information",
+      "acc_address": "Account address",
+      "acc_additional": "additional address",
+      "additional_description":"You have no other address entries in your address book.",
       "logout": "logout"
     },
     "reset_password": {
@@ -191,7 +195,7 @@
       "next": "Next post"
     },
     "excerpt": {
-      "read_more": "Read article"
+      "read_more": "Read more"
     }
   },
   "date_formats": {

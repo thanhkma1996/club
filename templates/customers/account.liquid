@@ -1,35 +1,38 @@
 <div class="template-account">
-  <div class="template-account-title">
+  <div class="account-title">
     <h1>{{ 'customers.account.header' | t }}</h1>
-    (<a href="/account">{{ 'customers.account.logout' | t | customer_logout_link }}</a>)
+    <!-- (<a href="/account">{{ 'customers.account.logout' | t | customer_logout_link }}</a>) -->
   </div>
 
   <div class="columns-main">
     <div class="sidebar sidebar-main">
         <ul>
             <li>
-                <a href="#">Account</a>
+                <a href="/account">Account</a>
             </li>
             <li>
-                <a href="#">Order</a>
+                <a href="admin/orders">Order</a>
             </li>
             <li>
               <a href="#">Stocklist shop</a>
            </li>
             <li>
-              <a href="#">Logout</a>
+              <a href="/account">{{ 'customers.account.logout' | t | customer_logout_link }}</a>
             </li>
         </ul>
   </div>
 
     <div class="content-my-account">
-     
+      <h2 class="title-account">Hi, {{ customer.first_name }}</h2>
       <div class="account-info">
-    
-        <h2 class="name">{{ customer.name }}</h2>
+        <h2 class="page-title">{{ 'customers.account.acc_information'  | t}}</h2>
+        <p class="name">{{ customer.name }}</p>
         <span class="email"><a href="mailto:{{ customer.email }}">{{ customer.email }}</a></span>
-    
-        {% if customer.default_address != nil %}
+        <p class="phone">{{ customer.phone }}</p>
+      </div>
+
+      <div class="account-address">
+        <h2 class="page-title">{{ 'customers.account.acc_address'  | t}}</h2>
           <h2>{{ 'customers.account.default_address' | t }}</h2>
           <p class="account-info-address">
             {% assign address = customer.default_address %}
@@ -50,7 +53,6 @@
               <span>{{ address.phone }}</span>
             {% endif %}
           </p>
-        {% endif %}
     
         {% if customer.addresses_count == 0 %}
           <a href="/account/addresses">{{ 'customers.account.new_address_link' | t }}</a>
@@ -61,7 +63,12 @@
             </a>
           </p>
         {% endif %}
-    
+      </div>
+
+      <div class="account-additional">
+          <h2 class="page-title">{{ 'customers.account.acc_additional'  | t}}</h2>
+          <p class="content-additional">{{ 'customers.account.additional_description'  | t}}</p>
+          <a href="/account/addresses">{{ 'customers.account.new_address_link' | t }}</a>
       </div>
 
       <div class="account-order-history">

@@ -554,7 +554,7 @@ input:-internal-autofill-selected  {
     height:20px;
     &:before{
       content:'';
-      background-image: url("icons-shopping-cart-black.svg");
+      background-image: url("icons-shopping-cart-empty.svg");
       position: absolute;
       background-size: 30px;
       width: 34px;
@@ -888,18 +888,16 @@ input:-internal-autofill-selected  {
 .product-form-inline .share-buttons{
 	display:none;
 }
-.share-button{
-	width: 100%;
-    height: 24px;
-    margin-bottom: 10px;
-    vertical-align: middle;
-}
+
 .share-button a{
 	display: inline-block;
     width: auto;
     height: 24px;
-    margin-right: 15px;
-    color:  #5A6374;
+    margin-right: 10px;
+    color:  #000000;
+    &:last-child {
+      margin-right: 0;
+    }
 }
 .is-selected .slideshow-slide-info{
 	background:#c3c5cb !important;
