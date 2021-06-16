@@ -14,9 +14,10 @@
 </p>
 
 {%- paginate blog.articles by section.settings.posts-per-page -%}
-  <div class="article-excerpts" data-article-excerpts>
-    <div class="article-excerpt-masonry-item-sizer" data-article-excerpt-masonry-item-sizer></div>
-    <div class="article-excerpt-masonry-gutter-sizer" data-article-excerpt-masonry-gutter-sizer></div>
+<!-- remove data-article-excerpts in div article-excerpts -->
+  <div class="article-excerpts" >
+    <!-- <div class="article-excerpt-masonry-item-sizer" data-article-excerpt-masonry-item-sizer></div>
+    <div class="article-excerpt-masonry-gutter-sizer" data-article-excerpt-masonry-gutter-sizer></div> -->
     {%- for article in blog.articles -%}
       {%- include 'article-excerpt', article: article -%}
     {%- endfor -%}

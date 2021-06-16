@@ -158,6 +158,7 @@ $font-inter-regular: 'inter_regular';
             font-size: 14px;
             line-height: 1.86;
             color: $color-black;
+            margin-bottom: 5px;
         }
         .article-excerpt-title {
             font-size: 18px;
@@ -179,6 +180,11 @@ $font-inter-regular: 'inter_regular';
             letter-spacing: normal;
             color: $color-2d;
             margin-bottom: 20px;
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            height: 125px;
         }
 
         .article-excerpt-read-more {
@@ -188,6 +194,14 @@ $font-inter-regular: 'inter_regular';
             line-height: 1.73;
             letter-spacing: normal;
             margin-bottom: 20px;
+        }
+    }
+}
+
+@media (min-width: 961px) and (max-width: 1024px) {
+    .page-template-blog {
+        #shopify-section-static-blog {
+            margin: 0 50px;
         }
     }
 }
