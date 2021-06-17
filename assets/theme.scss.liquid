@@ -308,14 +308,7 @@
   
   /**
    * Restore the focus styles unset by the previous rule.
-   */
   
-  button:-moz-focusring,
-  [type="button"]:-moz-focusring,
-  [type="reset"]:-moz-focusring,
-  [type="submit"]:-moz-focusring {
-    outline: 1px dotted ButtonText;
-  }
   
   /**
    * Change the border, margin, and padding in all browsers (opinionated).
@@ -490,6 +483,19 @@
   $color-button-text: {{ settings.color_button_text }};
   $color-background: #f7f7f7;
   
+
+  // Message
+  .success-message {
+    text-align: center;
+    font-size: 16px;
+    font-size: 16px;
+    line-height: 1.63;
+    letter-spacing: normal;
+    color: #ffffff;
+    padding: 10px 15px;
+    background: #2d2d2d;
+  }
+
   // Secondary accent
   $color-secondary-text: $color-title-text;
   $color-secondary-background: rgba($color-title-text, 0.08);
@@ -565,6 +571,15 @@
         font-style: normal;
   }
 
+  // @font-face {
+  //   font-family: 'Montserrat-Regular');
+  //   src: url('Montserrat-Regular.ttf') format('ttf'),
+  //       // url('Montserrat-Regular.woff') format('woff');
+  //   font-weight: normal;
+  //   font-style: normal;
+  // }
+
+
 
   // Text
   $color-text-light: rgba($color-text, 0.5);
@@ -589,6 +604,8 @@
   // Breakpoints
   $breakpoint-s: 640px;
   $breakpoint-l: 960px;
+  $breakpoint-m: 768px;
+  $breakpoint-ml: 1023px;
   $breakpoint-max: 1111px;
   
   // Z-Index
@@ -883,7 +900,7 @@
   
   %pill-button-focus {
     outline: auto;
-    outline: auto 5px -webkit-focus-ring-color;
+    // outline: auto 5px -webkit-focus-ring-color;
   }
   
   %pill-button-active {
@@ -2043,10 +2060,10 @@
   
       @include media($min: $breakpoint-l) {
         padding-bottom: 0;
-        margin-top: 65px;
+        margin-top: 115px;
         &.section-featured-products {
-          max-width: 1070px;
-          margin-top: 70px;
+          max-width: 1080px;
+          margin-top: 22px;
         }
       }
   
@@ -2740,7 +2757,7 @@
   .page-content {
     @extend %rte;
     @extend %rte-images;
-    max-width: 540px;
+    max-width: 706px;
     padding-bottom: 86px;
     margin-right: auto;
     margin-left: auto;
@@ -2763,6 +2780,10 @@
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
+
+        @media (min-width:1024px) {
+            margin-bottom: 68px;
+        }
   }
   
   .site-footer-social {
@@ -2860,19 +2881,19 @@
   // General items
   
   .footnav-item {
-    min-width: 10%;
     margin-bottom: 32px;
     margin: 0;
-    padding: 0 20px;
-    width: 17%;
+    padding: 3px 16px;
+    width: 16%;
     .footnav-title {
         display: none;
     }
+
+    &.footnav-item-mailchimp {
+        padding: 0;
+    }
     .ie9 & {
       float: left;
-    }
-    @media (max-width: 640px) {
-        padding: 0 !important;
     }
   }
   
@@ -2910,7 +2931,7 @@
   }
   
   .footnav-menu-link {
-    margin-bottom: 6px;
+    margin-bottom: 9px;
   
     &:last-of-type {
       margin-bottom: 0;
@@ -2946,15 +2967,15 @@
     }
   
     @include media($min: $breakpoint-l) {
-      -webkit-flex-basis: 47%;
-          -ms-flex-preferred-size:47%;
-              flex-basis:47%;
+      -webkit-flex-basis: 49%%;
+          -ms-flex-preferred-size:49%;
+              flex-basis:49%;
       padding: 0;
       margin:0 20px;
       .footnav-count-1 &,
       .footnav-count-2 &,
       .footnav-count-3 & {
-        margin-right: 0;
+        margin-right: 9px;
       }
     }
   }
@@ -3140,7 +3161,6 @@
   
       @include media($min: $breakpoint-s) {
         width: 100%;
-        margin-bottom: 130px;
       }
     }
   
@@ -3555,8 +3575,11 @@
   .collection-grid-item {
     display: block;
     float: left;
-    width: 33%;
-    margin: 0 3px 72px 0;
+    width: calc(100% / 3 - 2px);
+    margin: 0 2px 48px 0;
+    &:nth-child(3n + 1){
+        margin-right: 0;
+    }
   
     .collection-grid-uninit & {
       display: inline-block;
@@ -4026,7 +4049,7 @@
   .page-template-index{
     @include media($min: $breakpoint-s){
       .site-header{
-          padding: 35px 0;
+          padding: 5px 0;
           left:0;
           right:0;
           margin-left:auto;
@@ -4053,7 +4076,7 @@
     }
     @media (max-width: 1900px) and (min-width: 1336px) {
       position: relative;
-      top: -30px;
+      // top: -30px;
     }
   }
   
@@ -4450,7 +4473,7 @@
     display: block;
     position: absolute;
     top: -8px;
-    left: -19px;
+    left: -20px;
     width: 100%;
     text-align: center;
     text-decoration:none;
@@ -4939,10 +4962,14 @@
     overflow: hidden;
     outline-style: none;
   
-    @include media($min: $breakpoint-l) {
+    @include media($min: $breakpoint-ml) {
       display: inline-block;
-      width: 58.5%;
-      padding-left: 0;
+      max-width: 534px;
+      margin-right: 93px;
+    }
+
+    figure {
+        margin: 0;
     }
   
     .no-js & {
@@ -5014,9 +5041,9 @@
     width: 100%;
     padding: 0 30px;
   
-    @include media($min: $breakpoint-l) {
+    @include media($min: $breakpoint-ml) {
       display: inline-block;
-      width: 40%;
+      width: 41%;
       padding: 3px;
       vertical-align: top;
     }
@@ -5718,7 +5745,11 @@
       display: flex;
       justify-content: center;
       img {
-        margin: -10px 17px 0 0;
+        margin: -10px 23px 0 0;
+      }
+
+      @media (min-width: 1200px) {
+          // margin-left: 147px;
       }
     
       span {
@@ -6544,6 +6575,9 @@
     }
     .show_products_popup_cart {
         display: flex;
+        .cart-form {
+          width: 100%;
+        }
         .addedCartProducts {
           max-width: 300px;
           margin-right: 115px;
@@ -6839,15 +6873,19 @@
       }
   
       .product-highlights-count-3 & {
-        @include media($min: $breakpoint-l) {
-          width: calc(33.33% - 30px);
+        @include media($min: $breakpoint-m) {
+          width: calc(100% / 3 - 2px);
+          margin: 0 2px 0 0;
+          &:nth-child(3n + 3){
+            margin-right: 0
+          }
         }
       }
   
       .product-highlights-count-4 & {
         @include media($min: $breakpoint-l) {
             width: 33%;
-            margin: 0 3px 50px 0;
+            margin: 0 2px 0 0;
             &:nth-child(3n + 3){
                 margin-right: 0
             }
@@ -6855,9 +6893,9 @@
       }
   
       .product-highlights-count-5 & {
-        @include media($min: $breakpoint-l) {
+        @include media($min: $breakpoint-m) {
           width: 33%;
-          margin: 0 3px 50px 0;
+          margin: 0 2px 0 0;
           &:nth-child(3n+3) {
               margin-right: 0;
           }
@@ -6998,7 +7036,7 @@
     text-align: center;
     color:   $color_23;
     text-transform: uppercase;
-    margin: 25px 5px 11px 0;
+    margin: 20px 5px 9px 0;
     a {
       font-family: $font-label;
       font-size: 18px;
@@ -7858,6 +7896,9 @@
     padding-bottom: 30px;
     margin-right: 15px;
     margin-left: 15px;
+    video {
+      width: 100%;
+    }
   
     @include media($min: $breakpoint-s) {
       width: 100%;
@@ -8039,7 +8080,7 @@
     }
   
     img {
-      display: block;
+      display: none;
       width: 100%;
       height: auto;
       object-fit: cover;
@@ -8058,13 +8099,14 @@
   }
   
   .social {
-    @include grid-gutter(8px);
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     justify-content: flex-end;
     .social-link-instagram {
         order: 1;
+        margin-left: 13px;
+        margin-right: 7px;
     }
 
     .social-link-facebook {
@@ -8356,7 +8398,7 @@
       margin-left:auto;
       margin-right:auto;
       display:block;
-      height: 692px;
+      height: 700px;
   }
   .push_product:hover{
     background:#948459;
@@ -8423,7 +8465,7 @@
   @media (min-width: 641px) and (max-width: 940px) {
       .page-template-index {
           .site-header {
-              max-width: 80%;
+              // max-width: 80%;
           }
       }
       .site-actions-cart a:before {
@@ -8447,6 +8489,9 @@
 
       .footnav-item {
         width: 25% !important;
+        &.footnav-item-richtext {
+            padding: 0 40px 0 0 !important;
+        }
      }
   }
 
@@ -8460,6 +8505,7 @@
 
     .site-actions-account a:before {
         background-image: url('icons-light-account.svg');
+        left: -14px;
     }
 
     .site-actions-cart a:before  {
@@ -8478,6 +8524,18 @@
             background-repeat: no-repeat;
         }
     }
+  }
+
+  .footnav-item-customer {
+      .footnav-title {
+        display: block;
+        font-size: 14px;
+        color: #666666;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: normal;
+        font-family: 'inter-medium';
+      }
   }
 
   @media (min-width: 960px) {
@@ -8540,23 +8598,30 @@
                       display: none;
                 }
             }
+
+            .site-actions-cart-label  {
+              top: -8px;
+              left: -23px;
+              color: $color-black;
+              font-family: 'Montserrat-ExtraBold';
+            }
        }
   }
 
   // home
   @media (max-width: 960px) {
-    .site-actions-cart-label  {
-        top: -16px;
-        left: -22px;
-    }
     .page-template-index {
+        .site-actions-cart-label  {
+          top: -14px;
+          left: -22px;
+        }
         .slideshow-slide-image {
             img {
               display: none;
             }
         }
         .product-highlights-emphasized-wrapper {
-          display: block;
+          // display: block;
         }
         
         #insta-feed {
@@ -8576,6 +8641,21 @@
     }
   }
 
+  @media (max-width: 640px) {
+     .page-template-index { 
+        .slideshow-slide video {
+          max-height: 666px;
+          width: auto;
+        }
+        .site-logo-header::before {
+          display: none;
+        }
+
+        .site-actions-cart a:before  {
+            background-image: url('icons-shopping-cart-empty.svg') !important;
+        }
+     }
+  }
   // Minicart
   @media (max-width: 640px) {
       .product-alert  {

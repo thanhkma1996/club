@@ -13618,6 +13618,7 @@ Flickity.prototype._create = function() {
   this.accel = 0;
   this.originSide = this.options.rightToLeft ? 'right' : 'left';
   // create viewport & slider
+  // disbale slide on home
   this.viewport = document.createElement('div');
   this.viewport.className = 'flickity-viewport';
   Flickity.setUnselectable( this.viewport );
