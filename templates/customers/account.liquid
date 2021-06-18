@@ -23,16 +23,18 @@
   </div>
 
     <div class="content-my-account">
-      <h2 class="title-account">Hi, {{ customer.first_name }}</h2>
+      <h2 class="title-account">Hi, {{ customer.first_name }} <br><a href="/account?view=edit" style="font-size: 14px;">Edit account</a></h2>
       <div class="account-info">
         <h2 class="page-title">{{ 'customers.account.acc_information'  | t}}</h2>
         <p class="name">{{ customer.name }}</p>
+        <p class="business-name">{{ customer.business_name }}</p>
         <span class="email"><a href="mailto:{{ customer.email }}">{{ customer.email }}</a></span>
         <p class="phone">{{ customer.phone }}</p>
       </div>
 
       <div class="account-address">
-        <h2 class="page-title">{{ 'customers.account.acc_address'  | t}}</h2>
+        <div class="billing-address">
+          <h2 class="page-title">{{ 'customers.account.acc_address'  | t}}</h2>
           <h2>{{ 'customers.account.default_address' | t }}</h2>
           <p class="account-info-address">
             {% assign address = customer.default_address %}
@@ -53,8 +55,9 @@
               <span>{{ address.phone }}</span>
             {% endif %}
           </p>
-    
-        {% if customer.addresses_count == 0 %}
+
+          
+          {% if customer.addresses_count == 0 %}
           <a href="/account/addresses">{{ 'customers.account.new_address_link' | t }}</a>
         {% else %}
           <p>
@@ -63,6 +66,55 @@
             </a>
           </p>
         {% endif %}
+
+        </div>
+
+        <div class="shipping-address">
+          {% if customer.addresses.size > 0 %}
+          {% paginate customer.addresses by 4 %}
+            <div class="account-addresses">
+              <h2 class="account-address-title">{{ 'customers.addresses.addresses.heading' | t }}</h2>
+              {% assign my_num = 1 %}
+              {% for address in customer.addresses %}
+                <div class="account-address">
+                  <p>
+                    <span>{{ address.first_name }} {{ address.last_name }}</span>
+                    {% if address.company != blank %}
+                      <span>{{ address.company }}</span>
+                    {% endif %}
+                    {% if address.street != blank %}
+                      <span>{{ address.street }}</span>
+                    {% endif %}
+                    {% if address.city != blank or address.province_code != blank %}
+                      <span>
+                        {{ address.city }}{% if address.province_code %}, {{ address.province_code }}{% endif %}
+                      </span>
+                    {% endif %}
+                    {% if address.country != blank or address.zip != blank %}
+                      <span>{{ address.country }} {{ address.zip }}</span>
+                    {% endif %}
+                    {% if address.phone != blank %}
+                      <span>{{ address.phone }}</span>
+                    {% endif %}
+                  </p>
+                  {% if address == customer.default_address %}
+                    <p>{{ 'customers.addresses.default_address_message' | t }}</p>
+                  {% endif %}
+                  <a class="button edit-address secondary" href="account/addresses" data-edit-address="{{ address.id }}">{{ 'customers.addresses.edit' | t }}</a>
+                  <a class="button delete-address" href="account/addresses" data-delete-address="{{ address.id }}">{{ 'customers.addresses.delete' | t }}</a>
+                </div>
+              {% increment my_num %}
+                  {% if my_num == 1 %}
+                {% break %}
+              {% endif %}
+              {% endfor %}
+              {% include 'pagination' %}
+            </div>
+          {% endpaginate %}
+
+        </div>
+   
+      {% endif %}
       </div>
 
       <div class="account-additional">

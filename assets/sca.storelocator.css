@@ -43,7 +43,11 @@
 }
 
 button#scapl-geocode-btn  {
-  background: #5a6373 !important;
+  background: #2d2d2d !important;
+}
+
+a#scapl-geocode-btn {
+    display: none;
 }
 
 .scasl-see-more-content {
@@ -64,7 +68,7 @@ button#scapl-geocode-btn  {
 }
 
 .scasl-search-btn button {
-    background: #000000 !important;
+    background: #2d2d2d !important;
     width: 211px;
     font-weight: normal;
 }
@@ -74,7 +78,7 @@ button#scapl-geocode-btn  {
     max-width: 251px;
 }
 
-#scasl-tabs,.scasl-tag,.scasl-see-more,.scasl-see-less {
+#scasl-tabs, .scasl-tag,.scasl-see-more,.scasl-see-less {
     display: none;
 }
 

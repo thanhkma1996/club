@@ -13650,48 +13650,49 @@ Flickity.prototype.option = function( opts ) {
   utils$$1.extend( this.options, opts );
 };
 
-Flickity.prototype.activate = function() {
-  if ( this.isActive ) {
-    return;
-  }
-  this.isActive = true;
-  classie$$1.add( this.element, 'flickity-enabled' );
-  if ( this.options.rightToLeft ) {
-    classie$$1.add( this.element, 'flickity-rtl' );
-  }
+// remove slick slider on homepage
+// Flickity.prototype.activate = function() {
+//   if ( this.isActive ) {
+//     return;
+//   }
+//   this.isActive = true;
+//   classie$$1.add( this.element, 'flickity-enabled' );
+//   if ( this.options.rightToLeft ) {
+//     classie$$1.add( this.element, 'flickity-rtl' );
+//   }
 
-  this.getSize();
-  // move initial cell elements so they can be loaded as cells
-  var cellElems = this._filterFindCellElements( this.element.children );
-  moveElements( cellElems, this.slider );
-  this.viewport.appendChild( this.slider );
-  this.element.appendChild( this.viewport );
-  // get cells from children
-  this.reloadCells();
+//   this.getSize();
+//   // move initial cell elements so they can be loaded as cells
+//   var cellElems = this._filterFindCellElements( this.element.children );
+//   moveElements( cellElems, this.slider );
+//   this.viewport.appendChild( this.slider );
+//   this.element.appendChild( this.viewport );
+//   // get cells from children
+//   this.reloadCells();
 
-  if ( this.options.accessibility ) {
-    // allow element to focusable
-    this.element.tabIndex = 0;
-    // listen for key presses
-    eventie$$1.bind( this.element, 'keydown', this );
-  }
+//   if ( this.options.accessibility ) {
+//     // allow element to focusable
+//     this.element.tabIndex = 0;
+//     // listen for key presses
+//     eventie$$1.bind( this.element, 'keydown', this );
+//   }
 
-  this.emit('activate');
+//   this.emit('activate');
 
-  var index;
-  var initialIndex = this.options.initialIndex;
-  if ( this.isInitActivated ) {
-    index = this.selectedIndex;
-  } else if ( initialIndex !== undefined ) {
-    index = this.cells[ initialIndex ] ? initialIndex : 0;
-  } else {
-    index = 0;
-  }
-  // select instantly
-  this.select( index, false, true );
-  // flag for initial activation, for using initialIndex
-  this.isInitActivated = true;
-};
+//   var index;
+//   var initialIndex = this.options.initialIndex;
+//   if ( this.isInitActivated ) {
+//     index = this.selectedIndex;
+//   } else if ( initialIndex !== undefined ) {
+//     index = this.cells[ initialIndex ] ? initialIndex : 0;
+//   } else {
+//     index = 0;
+//   }
+//   // select instantly
+//   this.select( index, false, true );
+//   // flag for initial activation, for using initialIndex
+//   this.isInitActivated = true;
+// };
 
 // slider positions the cells
 Flickity.prototype._createSlider = function() {

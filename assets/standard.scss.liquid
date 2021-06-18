@@ -157,6 +157,7 @@ $font-inter-regular: 'inter_regular';
             letter-spacing: normal;
             color: $color-23;
             font-family: $font-montser;
+            margin-top: 0;
             a {
                 text-decoration: none;
                 text-transform: uppercase;
@@ -171,10 +172,10 @@ $font-inter-regular: 'inter_regular';
             color: $color-2d;
             margin-bottom: 20px;
             display: -webkit-box;
-            -webkit-line-clamp: 5;
+            -webkit-line-clamp: 6;
             -webkit-box-orient: vertical;
             overflow: hidden;
-            height: 125px;
+            height: 150px;
         }
         .article-excerpt-read-more {
             color: $color-2d;
@@ -195,71 +196,71 @@ $font-inter-regular: 'inter_regular';
     }
 }
 
-// @media (max-width: 767px) {
-//     .section-blog .article-excerpt {
-//         margin-bottom: 42px;
-//         width: 100%;
-//         &:nth-child(2),
-//         &:first-child {
-//             width: 100%;
-//         }
-//     }
-//     .page-template-blog {
-//         .page-title {
-//             font-size: 22px;
-//             line-height: normal;
-//             letter-spacing: 4px;
-//             margin: 18px 0 30px;
-//         }
-//         #shopify-section-static-blog {
-//             padding: 0;
-//             margin: 0;
-//             .article-excerpt-date {
-//                 margin-top: -3px;
-//             }
-//             .article-excerpt-title {
-//                 margin-top: 0;
-//             }
-//             .article-excerpt-rte {
-//                 height: auto;
-//                 -webkit-line-clamp: unset;
-//                 margin-bottom: 23px;
-//             }
-//             .pagination {
-//                 margin: 44px 0;
-//                 li {
-//                     display: none;
-//                     &.pagination-next,
-//                     &.pagination-previous {
-//                         display: block;
-//                         max-width: 160px;
-//                         margin: 0 auto;
-//                         a {
-//                             height: 42px;
-//                             max-width: 160px;
-//                             border: solid 2px $color-black;
-//                             margin: 0 auto;
-//                             padding: 11px 50px;
-//                             font-size: 14px;
-//                             letter-spacing: normal;
-//                             text-align: center;
-//                             color: $color-black;
-//                             text-transform: uppercase;
-//                         }
-//                     }
-//                     &.pagination-previous {
-//                         a {
-//                             padding: 11px 40px;
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//         .article-excerpt-content {
-//             padding: 0 27px;
-//         }
-//     }
-// }
+@media (max-width: 767px) {
+    .section-blog .article-excerpt {
+        margin-bottom: 42px;
+        width: 100%;
+        &:nth-child(2),
+        &:first-child {
+            width: 100%;
+        }
+    }
+    .page-template-blog {
+        .page-title {
+            font-size: 22px;
+            line-height: normal;
+            letter-spacing: 4px;
+            margin: 18px 0 30px;
+        }
+        #shopify-section-static-blog {
+            padding: 0;
+            margin: 0;
+            .article-excerpt-date {
+                margin-top: -3px;
+            }
+            .article-excerpt-title {
+                margin-top: 0;
+            }
+            .article-excerpt-rte {
+                height: auto;
+                -webkit-line-clamp: unset;
+                margin-bottom: 23px;
+            }
+            .pagination {
+                margin: 44px 0;
+                li {
+                    display: none;
+                    &.pagination-next,
+                    &.pagination-previous {
+                        display: block;
+                        max-width: 160px;
+                        margin: 0 auto;
+                        a {
+                            height: 42px;
+                            max-width: 160px;
+                            border: solid 2px $color-black;
+                            margin: 0 auto;
+                            padding: 11px 50px;
+                            font-size: 14px;
+                            letter-spacing: normal;
+                            text-align: center;
+                            color: $color-black;
+                            text-transform: uppercase;
+                        }
+                    }
+                    &.pagination-previous {
+                        a {
+                            padding: 11px 40px;
+                        }
+                    }
+                }
+            }
+        }
+        .article-excerpt-content {
+            padding: 0 27px;
+        }
+    }
+}
 
 // // Popup menu
 // @media (min-width:768px) {
@@ -384,5 +385,77 @@ $font-inter-regular: 'inter_regular';
                 margin: 0;
             }
         }
+    }
+}
+
+  // Fine store 
+  .page-template-page.sca-storelocator {
+    #scasl-tabs {
+        display: none;
+    }
+}
+
+// Contact page 
+body.page-template-page\.contact {
+  .masthead {
+      margin-top: 86px
+  }
+
+  .page-contact-contactbar {
+    margin: 85px 0 116px 0;
+  }
+
+  #contact-message {
+      min-height: 161px;
+  }
+
+  .contact-submit {
+      text-align: center;
+      margin-top: 55px;
+  }
+}
+
+@media (max-width: 640px) {
+body.page-template-page\.contact {
+    .masthead {
+        margin: 0;
+        .masthead-title {
+            margin: 20px 0 30px 0;
+            font-size: 22px;
+            letter-spacing: 4px;
+        }
+    }
+    .page-contact {
+        display: flex;
+        flex-wrap:wrap;
+        .page-contact-contactbar {
+            order: 1;
+            margin: 65px 0 98px 0;
+            flex-basis: 100%;
+            padding-left: 30px;
+        }
+        form {
+            order: 0;
+            label {
+                font-size: 15px;
+            }
+        }
+    }
+   
+    .page-contact-contactbar {
+      .contactbar-item-icon {
+          &.phone:before,&.email:before {
+              left: 0;
+          }
+      }
+    }
+
+}
+}
+
+// all standard page 
+.page-template-page {
+    .site-main .page {
+        margin-bottom: 0;
     }
 }

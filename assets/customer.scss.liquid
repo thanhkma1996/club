@@ -10,7 +10,7 @@
 }
 
 #mc_embed_signup_scroll .mc-field-group input {
-    width: 350px;
+    width: 352px;
     height: 42px;
     border: none !important;
     border-radius: 0;
@@ -20,6 +20,9 @@
     font-size: 16px;
     color: #666666;
     font-family: 'inter_regular';
+    &.mce_inline_error  {
+        border: solid 1.5px #161616 !important;
+    }
 }
 
 input:-internal-autofill-selected {
@@ -71,7 +74,6 @@ input:-internal-autofill-selected {
         font-size: 70px;
         text-align: center;
         text-transform: lowercase;
-        font-family: 'nunito_sansextralight';
         margin-bottom: 30px;
     }
     .content-block {
@@ -267,6 +269,22 @@ input:-internal-autofill-selected {
         margin-top: 25px;
         padding: 0 25px;
     }
+
+    // Home 
+    .page-template-index {
+        .site-header {
+            position: relative;
+            .site-header-wrapper {
+                margin: 0;
+                position: absolute;
+                top: 0;
+                z-index: 111;
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+    }
+
     .template-account-login-title {
         margin-top: 0 !important;
         font-size: 40px !important;
@@ -377,9 +395,16 @@ input:-internal-autofill-selected {
     .quantity-decrement {
         padding-left: 0;
     }
+    // Our range
     .collection-header-no-image .collection-header-info {
         margin: 0;
+        padding: 0;
     }
+
+    .collection-header {
+        margin-bottom: 0;
+    }
+
     #shopify-section-section-1 .slideshow-slide {
         margin-left: 0;
         margin-right: 0;
@@ -459,7 +484,8 @@ input:-internal-autofill-selected {
 }
 
 #site-mobilenav .share-buttons a {
-    margin-right: 30px;
+    margin-right: 8px;
+    color: #000;
 }
 
 .slideshow-slides-3 .slideshow-slide-link {
@@ -973,7 +999,7 @@ input:-internal-autofill-selected {
         text-align: center;
         display: flex;
         justify-content: center;
-        margin-bottom: 30px;
+        margin-bottom: 33px;
         .social {
             justify-content: center;
             margin: 0;
@@ -995,8 +1021,9 @@ input:-internal-autofill-selected {
     }
     .site-actions-cart {
         a:before {
-            background-size: 33px;
-            top: -20px;
+            background-size: 29px;
+            top: -16px;
+            left: -32px;
         }
     }
     .index-wrapper {
@@ -1011,13 +1038,13 @@ input:-internal-autofill-selected {
         width: 50%;
         padding: 0 20px 0 0;
         &.footnav-item-menu {
-            margin-right: 32px;
-            width: 46%;
+            margin-right: 27px;
+            width: 50%;
             padding: 0;
         }
 
         &.footnav-item-customer {
-            width: 42%;
+            width: 40%;
             padding: 0;
         }
 
