@@ -2,38 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af7e5881-5409-472b-b268-77378e8eb0e0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/Montserrat-Bold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Montserrat-Bold.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Montserrat-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/Montserrat-Regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/account.scss.liquid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icon-call.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icon-minus-white.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icon-plus-white.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icons-shopping-cart-empty.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/mail-contact.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/minus.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/plus.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/standard.scss.liquid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/test-custom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/customer.scss.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/assets/customer.scss.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/nunitosans-black-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/nunitosans-black-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/nunitosans-blackitalic-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/nunitosans-blackitalic-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/nunitosans-bold-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/nunitosans-bold-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/nunitosans-bolditalic-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/nunitosans-bolditalic-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/nunitosans-extrabold-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/nunitosans-extrabold-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/nunitosans-extrabolditalic-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/nunitosans-extrabolditalic-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/nunitosans-extrabolditalic-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/nunitosans-extralight-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/nunitosans-extralight-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/nunitosans-extralightitalic-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/nunitosans-extralightitalic-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/nunitosans-italic-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/nunitosans-italic-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/nunitosans-light-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/nunitosans-light-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/nunitosans-lightitalic-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/nunitosans-lightitalic-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/nunitosans-regular-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/nunitosans-regular-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/nunitosans-semibold-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/nunitosans-semibold-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/nunitosans-semibolditalic-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/nunitosans-semibolditalic-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/handy.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/handy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/icons-shopping-cart-black.svg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/icons-shopping-cart-black.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/sca.storelocator.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/sca.storelocator.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/theme.scss.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/assets/theme.scss.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sections/static-collection.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/static-collection.liquid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layout/theme.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/layout/theme.liquid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locales/en.default.json" beforeDir="false" afterPath="$PROJECT_DIR$/locales/en.default.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sections/site-footer.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/site-footer.liquid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sections/static-article.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/static-article.liquid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sections/static-blog.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/static-blog.liquid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sections/static-contactbar.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/static-contactbar.liquid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sections/static-header.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/static-header.liquid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sections/static-product.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/sections/static-product.liquid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snippets/pagination.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/pagination.liquid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snippets/share-buttons.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/snippets/share-buttons.liquid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/customers/account.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/templates/customers/account.liquid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/customers/login.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/templates/customers/login.liquid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/customers/register.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/templates/customers/register.liquid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/page.contact.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/templates/page.contact.liquid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/page.sca-storelocator.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/templates/page.sca-storelocator.liquid" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,17 +49,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/theme.scss.liquid">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42651">
-              <caret line="2031" column="37" selection-start-line="2031" selection-start-column="37" selection-end-line="2031" selection-end-column="37" />
+            <state relative-caret-position="48090">
+              <caret line="2290" column="7" selection-start-line="2290" selection-start-column="7" selection-end-line="2290" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/snippets/account-address-form.liquid">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="392">
+              <caret line="71" column="34" selection-start-line="71" selection-start-column="34" selection-end-line="71" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/customer.scss.liquid">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2389">
-              <caret line="894" column="1" selection-start-line="894" selection-start-column="1" selection-end-line="894" selection-end-column="1" />
+            <state relative-caret-position="18102">
+              <caret line="862" column="16" selection-start-line="862" selection-start-column="16" selection-end-line="862" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/locales/en.default.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4095">
+              <caret line="195" column="31" selection-start-line="195" selection-start-column="31" selection-end-line="195" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -65,7 +86,7 @@
         <entry file="file://$PROJECT_DIR$/sections/site-footer.liquid">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="5544">
-              <caret line="264" column="15" selection-start-line="264" selection-start-column="15" selection-end-line="264" selection-end-column="15" />
+              <caret line="264" column="3" selection-start-line="264" selection-start-column="3" selection-end-line="264" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -92,6 +113,7 @@
         <option value="$PROJECT_DIR$/sections/site-footer.liquid" />
         <option value="$PROJECT_DIR$/assets/theme.scss.liquid" />
         <option value="$PROJECT_DIR$/assets/customer.scss.liquid" />
+        <option value="$PROJECT_DIR$/locales/en.default.json" />
       </list>
     </option>
   </component>
@@ -114,7 +136,7 @@
             <path>
               <item name="club" type="b2602c69:ProjectViewProjectNode" />
               <item name="club" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="locales" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="club" type="b2602c69:ProjectViewProjectNode" />
@@ -131,10 +153,10 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="C:/xampp/htdocs/projects/phl" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -160,16 +182,19 @@
       <updated>1623158415878</updated>
       <workItem from="1623158416951" duration="1500000" />
       <workItem from="1623219590933" duration="7000" />
+      <workItem from="1624096221576" duration="1441000" />
+      <workItem from="1624240573478" duration="124000" />
+      <workItem from="1624241612827" duration="669000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1507000" />
+    <option name="totallyTimeSpent" value="3741000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26066098" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -181,7 +206,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32936078" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -196,22 +221,36 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/assets/theme.scss.liquid">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42651">
-          <caret line="2031" column="37" selection-start-line="2031" selection-start-column="37" selection-end-line="2031" selection-end-column="37" />
+        <state relative-caret-position="48090">
+          <caret line="2290" column="7" selection-start-line="2290" selection-start-column="7" selection-end-line="2290" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/customer.scss.liquid">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18102">
+          <caret line="862" column="16" selection-start-line="862" selection-start-column="16" selection-end-line="862" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/locales/en.default.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4095">
+          <caret line="195" column="31" selection-start-line="195" selection-start-column="31" selection-end-line="195" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sections/site-footer.liquid">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5544">
-          <caret line="264" column="15" selection-start-line="264" selection-start-column="15" selection-end-line="264" selection-end-column="15" />
+          <caret line="264" column="3" selection-start-line="264" selection-start-column="3" selection-end-line="264" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/customer.scss.liquid">
+    <entry file="file://$PROJECT_DIR$/snippets/account-address-form.liquid">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2389">
-          <caret line="894" column="1" selection-start-line="894" selection-start-column="1" selection-end-line="894" selection-end-column="1" />
+        <state relative-caret-position="392">
+          <caret line="71" column="34" selection-start-line="71" selection-start-column="34" selection-end-line="71" selection-end-column="34" />
         </state>
       </provider>
     </entry>

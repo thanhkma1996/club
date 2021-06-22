@@ -45,6 +45,12 @@
         </a>
       {% endif %}
 
+      {% if settings.share_widget_instagram %}
+        <a target="_blank" href="//www.instagram.com/sharer.php?u={{ social_url }}">
+          {%- include 'social', id: 'instagram' -%}
+        </a>
+      {% endif %}
+
       {% if settings.share_widget_twitter %}
         <a target="_blank" href="//twitter.com/share?url={{ social_url }}">
           {%- include 'social-icon', id: 'twitter' -%}

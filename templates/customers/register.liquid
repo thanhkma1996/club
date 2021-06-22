@@ -44,6 +44,23 @@
     </div>
 
     <div class="input-wrapper">
+      <label class="input-label" for="customer[business_name]">{{ 'general.form.business_name' | t }}</label>
+      <input
+        id="customer_business_name"
+        class="input-field {% if form.errors contains 'business_name' %}error{% endif %}"
+        type="text"
+        placeholder=""
+        value="{{ form.business_name }}"
+        name="customer[business_name]">
+
+      {% if form.errors contains 'business_name' %}
+        <p class="error-message">
+          {{ 'general.form.business_name' | t }} {{ form.errors.messages['business_name'] }}
+        </p>
+      {% endif %}
+    </div>
+
+    <div class="input-wrapper">
       <label class="input-label" for="customer[email]">{{ 'general.form.email' | t }}</label>
       <input
         id="customer_email"
@@ -75,6 +92,22 @@
     </div>
 
     <div class="input-wrapper">
+      <label class="input-label" for="customer[phone]">{{ 'general.form.phone' | t }}</label>
+      <input
+        id="customer_phone"
+        class="input-field {% if form.errors contains 'phone' %}error{% endif %}"
+        type="text"
+        value="{{ form.phone }}"
+        name="customer[phone]">
+
+      {% if form.errors contains 'phone' %}
+        <p class="error-message">
+          {{ 'general.form.phone' | t }} {{ form.errors.messages['phone'] }}
+        </p>
+      {% endif %}
+    </div>
+
+    <div class="btn-register">
       <input class="button" type="submit" value="{{ 'customers.register.submit' | t }}">
     </div>
 

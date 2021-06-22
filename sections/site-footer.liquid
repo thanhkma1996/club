@@ -87,7 +87,7 @@
           {% endif %}
 
           {% if block.type == 'customer' %}
-            <!-- {% if shop.customer_accounts_enabled %}
+            {% if shop.customer_accounts_enabled %}
               <h1 class="footnav-title">{{ block.settings.title | escape }}</h1>
               <ul class="footnav-menu">
                 {% if customer %}
@@ -108,8 +108,11 @@
                     </li>
                   {% endif %}
               </ul>
-            {% endif %} -->
+            {% endif %}
 
+          {% endif %}
+
+          {% if block.type == 'mailchimp' %}
             <div class="desktop-social">{% if section.settings.enable_social %}{% include 'social' %}{% endif %}</div>
           {% endif %}
 

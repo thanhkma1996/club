@@ -32,7 +32,7 @@
     <div class="product-alert-content">
       <div class="product-alert-dismiss">{% include 'icon', id: 'close' %}</div>
       <div class="show_products_popup_cart">
-        <div class="addedCartProducts"><span><label>ADDED</label> TO CART</span> </div>
+        <div class="addedCartProducts"><span>ADDED TO CART</span> </div>
       	<form class="cart-form{% if cart.items.size == 0 %} cart-empty{% endif %}"  action="/cart/add" method="post" data-cart-form>
           <section class="cart-items">
             
@@ -124,6 +124,12 @@
 <!--     {% if enable_inline_form and section.settings.enable_social_sharing %}
       {% include 'share-buttons' %}
     {% endif %} -->
+    <div class="link_product">
+      {% if product.metafields.video_url %}
+      {{ product.metafields.video_url.video_iframe }}
+        <a href="{{ product.metafields.video_url.video_url | escape }}" target="_blank">{{ product.metafields.video_url.txt_link | escape }}</a>
+      {% endif %}
+    </div>
 
   </section>
 </div>

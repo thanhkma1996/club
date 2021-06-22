@@ -21,6 +21,7 @@
 {%- endcapture -%}
 
 <div class="article-wrapper">
+  <h1 class="article-title">{{ article.title }}</h1>
   {%- if article.image -%}
     <figure class="article-image">
       <img
@@ -31,7 +32,7 @@
 
   <article class="article">
     {{ article_publication_info }}
-    <h1 class="article-title">{{ article.title }}</h1>
+    
     {{ article_publication_info }}
     <div class="article-rte rte">{{ article.content }}</div>
     {%- if section.settings.enable_social_sharing -%}
@@ -40,22 +41,29 @@
     {%- if blog.previous_article or blog.next_article -%}
       <nav class="article-pagination">
         {% if blog.previous_article %}
+        <div class="btn-prev">
           <a class="article-pagination-previous-post" href="{{ blog.previous_article }}">
             <span class="article-pagination-arrow">{%- include 'icon', id: 'arrow' -%}</span>
             <span class="article-pagination-previous-text">{{ 'article.pagination.previous' | t }}</span>
           </a>
+        </div>
         {% endif %}
 
-        <a class="article-pagination-blog" href="{{ blog.url }}">
-          <span class="article-pagination-blog-text">{{ 'article.pagination.blog' | t }}</span>
-        </a>
+        <div class="btn-pagination">
+          <a class="article-pagination-blog" href="{{ blog.url }}">
+            <span class="article-pagination-blog-text">{{ 'article.pagination.blog' | t }}</span>
+          </a>
+        </div>
 
-        {% if blog.next_article %}
+        <div class="btn-next">
+          {% if blog.next_article %}
           <a class="article-pagination-next-post" href="{{ blog.next_article }}">
             <span class="article-pagination-next-text">{{ 'article.pagination.next' | t }}</span>
             <span class="article-pagination-arrow">{%- include 'icon', id: 'arrow' -%}</span>
           </a>
         {% endif %}
+        </div>
+        
       </nav>
     {%- endif -%}
 
