@@ -67,7 +67,7 @@
                 "edit_existing_heading": "Edit address"
             },
             "addresses": {
-                "heading": "Shipping address"
+                "heading": "Addresses"
             }
         },
         "account": {
@@ -78,7 +78,6 @@
             "fulfillment": "Fulfillment",
             "total": "total",
             "default_address": "Default address",
-            "billing_address": "Billing addresses",
             "view_addresses": "View addresses ({{ count }})",
             "empty": "You have no orders",
             "new_address_link": "Add new address",
@@ -102,7 +101,6 @@
             "message": "Sign up for an account to take advantage of order tracking and history as well as pre-filled forms during checkout on subsequent orders."
         },
         "order": {
-            "title_header": "Orders",
             "header": "Order {{ order_number }}",
             "shipping_address": "Shipping address",
             "billing_address": "Billing address",
@@ -194,7 +192,7 @@
         "pagination": {
             "blog": "Back to blog",
             "previous": "Previous post",
-            "next": "Next post"
+            "next": "Next post",
         },
         "excerpt": {
             "read_more": "Read more"
