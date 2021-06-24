@@ -1,0 +1,48 @@
+<div class="account-order-history">
+
+    {% if param_page != 'order-history' %}<h2>{{ 'customers.account.order_history' | t }}</h2>{% endif %}
+  
+    {% if customer.orders.size > 0 %}
+      {% paginate customer.orders by 20 %}
+        <table class="account-order-history-orders">
+          <thead>
+            <tr>
+              <th class="first">{{ 'customers.account.order' | t }}</th>
+              <th>Date</th>
+              <th>Ship to</th>
+              <th>{{ 'customers.account.total' | t }}</th>
+              <th>Status</th>
+              <th class="last">Action</th>
+            </tr>
+          </thead>
+  
+          <tbody>
+            {% for order in customer.orders %}
+              <tr class="{% if order.cancelled %}cancelled_order{% endif %}">
+                <td class="order-number first">
+                  {{ order.name | capitalize }}
+                </td>
+                <td class="order-date">
+                  <span class="date">{{ order.created_at | date: format: 'short_day_month_year' }}</span>
+                </td>
+                <td class="order-name {{ order.name | capitalize }}">
+                  <span class="name">{{ order.shipping_address.first_name }} {{ order.shipping_address.last_name }}</span>
+                </td>
+                <td class="total"><span class="money">{{ order.total_price | money }}</span></td>
+                <td class="payment-status {{ order.financial_status }}">
+                  {{ order.financial_status | capitalize }}
+                </td>
+                <td class="order-number last">
+                  <a href="{{order.customer_url }}">view order</a>
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        {% include 'pagination' %}
+      {% endpaginate %}
+    {% else %}
+      <p class="empty">{{ 'customers.account.empty' | t }}</p>
+    {% endif %}
+  
+  </div>

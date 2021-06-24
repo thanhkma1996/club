@@ -1,0 +1,23 @@
+
+ <div class="account-title">
+    <h1>{{ 'customers.account.header-wishlist' | t }}</h1>
+  </div>
+<div class="columns-main">
+    {%- include 'account-nav' -%} 
+    <div class="wishlist {{ class }}">
+        <div class="row">
+          <div class="col-xs-12">
+            <section class="wishlist__section">
+              <h2 class="wishlist__title">{{ page.title }}</h1>
+      
+              <div class="rte wishlist__rte">
+                {%- include 'text' with page.content -%}
+              </div>
+            </section>
+          </div>
+        </div>
+      
+      </div>
+</div>
+
+

@@ -2,7 +2,7 @@
   <h1 class="template-account-addresses-title">{{ 'customers.addresses.header' | t }}</h1>
   <p class="template-account-addresses-subtitle"><a href="/account">{{ 'customers.account.header' | t }}</a></p>
   <div class="account-address-forms">
-    {% include 'account-address-form', address: customer.new_address, active: true %}
+    {% include 'account-address-info', address: customer.new_address, active: true %}
 
     {% paginate customer.addresses by 4 %}
       {% for address in customer.addresses %}

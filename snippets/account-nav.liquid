@@ -1,0 +1,90 @@
+<div class="sidebar sidebar-main">
+    <ul>
+      {%- for link in linklists.account-navigation.links -%}
+        <li>
+          <a href="{{ link.url }}" {% if link.active %}aria-current="page"{% endif %}>
+            {{ link.title }}
+          </a>
+
+          {%- if link.links != blank -%}
+            <ul>
+              {%- for child_link in link.links -%}
+                <li>
+                  <a href="{{ child_link.url }}" {% if child_link.active %}aria-current="page"{% endif %}>
+                    {{ child_link.title }}
+                  </a>
+
+                  {%- if child_link.links != blank -%}
+                    <ul>
+                      {%- for grandchild_link in child_link.links -%}
+                        <li>
+                          <a href="{{ grandchild_link.url }}" {% if grandchild_link.active %}aria-current="page"{% endif %}>
+                            {{ grandchild_link.title }}
+                          </a>
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+                  {%- endif -%}
+
+                </li>
+              {%- endfor -%}
+            </ul>
+          {%- endif -%}
+
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+
+  <select class="account-nav-mob js-account-nav">
+    {%- for link in linklists.account-navigation.links -%}
+      {%- if link.url contains active_view or active_page contains link.url -%}
+        {%- assign select_active = true -%}
+      {%- endif -%}
+      {%- if link.links == blank -%}
+        <option {% if select_active %}selected="selected"{% endif %}
+          value="{{ link.url }}">
+            {{ link.title }}
+        </option>
+      {%- endif -%}
+      {%- assign select_active = false -%}
+    {%- endfor -%}
+  </select>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      handleChangeLocation();
+    });
+
+    function handleChangeLocation() {
+      const $select = document.querySelector('.js-account-nav');
+      const $selectOptions = [...$select.options];
+
+      if ($select) {
+        // on change go to
+        $select.addEventListener('change', () => {
+          window.location = $select.options[$select.selectedIndex].value
+        });
+        // Add selected by pathname
+        $selectOptions.forEach(function (option) {
+          if (option.value === (window.location.pathname + window.location.search)) {
+            option.selected = 'selected';
+          } else {
+            option.selected = '';
+          }
+        });
+      }
+    }
+
+    const accNavLinks = [...document.querySelectorAll('.js-account-nav-item')];
+
+    if (accNavLinks.length) {
+      accNavLinks.forEach( function (link) {
+        if (link.href === document.location.href) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      } )
+    }
+  </script>

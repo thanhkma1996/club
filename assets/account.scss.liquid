@@ -13,7 +13,6 @@ $color-df: #dfdfdf;
         letter-spacing: 8px;
         text-align: center;
         color: $color-black;
-        font-size: 40px !important;
         font-family: $font-montser;
         text-transform: uppercase;
         margin-bottom: 70px;
@@ -145,100 +144,317 @@ $color-df: #dfdfdf;
         letter-spacing: 8px;
         text-align: center;
         color: $color-black;
-        font-size: 40px !important;
+        font-size: 40px;
         font-family: $font-montser;
         text-transform: uppercase;
         margin-bottom: 70px;
     }
 
-    .columns-main {
-        display: flex;
-        .sidebar.sidebar-main { 
-            width: 147px;
-            margin-right: 126px;
-            ul {
-                padding: 0;
-                li {
-                    list-style-type: none;
-                    margin-bottom: 22px;
-                    a {
-                        text-transform: uppercase;
-                        font-size: 16px;
-                        font-weight: 500;
-                        line-height: normal;
-                        letter-spacing: normal;
-                        color: $color-black;
-                        text-decoration: none;
-                    }
-                }
-            }
-        }
-        .content-my-account {
-            display: grid;
-            width: calc(100% - 273px);
-            h2.page-title {
-                max-width: max-content;
-                font-size: 18px;
-                line-height: 1.56;
-                letter-spacing: normal;
-                color:$color-23;
-                font-family: $font-montser;
-                padding-bottom: 10px;
-                border-bottom: 1px solid $color-df;
-                text-transform: uppercase;
-            }
-            .title-account {
-                font-family: $font-montser;
-                font-size: 28px;
-                line-height: 1.14;
-                letter-spacing: normal;
-                color: $color-23;
-            }
+}
 
-            .account-info,.container-address,.account-additional {
-                margin-bottom: 60px;
-            }
-
-            .account-address {
-                .billing-address,.shipping-address {
-                    float: left;
-                    width: 49.5%;
-                }
-
-                h2 {
-                    font-family: 'Montserrat-Bold';
-                    font-size: 15px;
-                    font-weight: bold;
-                    line-height: 1.87;
+.columns-main {
+    display: flex;
+    max-width: 1070px;
+    margin: 0 auto;
+    .sidebar.sidebar-main {
+        width: 147px;
+        margin-right: 126px;
+        ul {
+            padding: 0;
+            li {
+                list-style-type: none;
+                margin-bottom: 22px;
+                a {
+                    text-transform: uppercase;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: normal;
                     letter-spacing: normal;
                     color: $color-black;
-                    text-transform: uppercase;
+                    text-decoration: none;
                 }
             }
         }
     }
-    
+    .content-my-account {
+        display: grid;
+        width: calc(100% - 273px);
+        h2.page-title {
+            max-width: max-content;
+            font-size: 18px;
+            line-height: 1.56;
+            letter-spacing: normal;
+            color:$color-23;
+            font-family: $font-montser;
+            padding-bottom: 10px;
+            border-bottom: 1px solid $color-df;
+            text-transform: uppercase;
+        }
+        .title-account {
+            font-family: $font-montser;
+            font-size: 28px;
+            line-height: 1.14;
+            letter-spacing: normal;
+            color: $color-23;
+        }
+
+        .account-info,.container-address,.account-additional {
+            margin-bottom: 60px;
+        }
+
+        .account-address {
+            .billing-address,.shipping-address {
+                float: left;
+                width: 49.5%;
+            }
+
+            h2 {
+                font-family: 'Montserrat-Bold';
+                font-size: 15px;
+                font-weight: bold;
+                line-height: 1.87;
+                letter-spacing: normal;
+                color: $color-black;
+                text-transform: uppercase;
+            }
+        }
+    }
 }
 
 .template-account-order-subtitle {
     display: none;
 }
 
+// tablet
+@media (min-width:768px) {
+    .js-account-nav {
+        display: none;
+    }
+}
+
+// Mobile account
+@media (max-width:1023px) {
+    .columns-main {
+        .sidebar.sidebar-main {
+            margin-right: 50px;
+        }
+
+        .template-account-order-history {
+            width: calc(100% - 197px);
+        }
+    }
+}
+
+@media (max-width:767px) {
+    .template-account, .template-account-order {
+        margin: 0 0 60px 0;
+    }
+
+    // Order details
+    body.page-template-customers\/account\.order {
+        .site-main {
+            padding: 0 30px;
+        }
+
+        .account-order-history  {
+            width: 100%;
+        }
+        
+    }
+   
+    .account__order-details,.template-account,.account__order-history,.template-account-order {
+        h1 {
+            font-size: 22px !important;
+            letter-spacing: 4px !important;
+            text-align: center;
+            color: #000000;
+            margin: 20px 10px 30px 10px;
+            margin-bottom: 0;
+        }
+    }
+
+    
+    .columns-main {
+        display: grid;
+
+        .sidebar.sidebar-main {
+            width: 100%;
+            display: none;
+        }
+
+        .js-account-nav {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            position: relative;
+            background-repeat: no-repeat;
+            background-size: 10px;
+            background-position: 98% center;
+            padding: 0 16px;
+            background-image: url("{{ 'arrow-select.png' | asset_url }}");
+            height: 42px;
+            border: none;
+        }
+
+        .template-account-order-history {
+            width: 100%;
+            margin-top: 15px;
+            h2 {
+                font-size: 16px;
+                line-height: 1.63;
+            }
+            .header-infor-history ul li  {
+                padding:0 0 10px 0;
+            }
+
+            .account-order {
+                .order-item-image {
+                    width: 112px;
+                    img {
+                        width: 112px;
+                    }
+                }
+
+                tr {
+                    position: relative;
+                    .order-item-title  {
+                        padding-top: 20px;
+                        vertical-align: top;
+                        a {
+                            font-size: 14px;
+                            line-height: 1.86;
+                            letter-spacing: normal;
+                            text-align: left;
+                        }
+                    }
+
+                    .order-item-quantity {
+                        position: absolute;
+                        left: 130px;
+                        bottom: 26px;
+                        font-size: 15px;
+                        font-weight: bold;
+                        line-height: normal;
+                        letter-spacing: normal;
+                        color: #3f3f3f;
+                        font-family: 'inter-bold';
+                    }
+
+                    .order-item-total {
+                        vertical-align: bottom;
+                        padding-bottom: 26px;
+                        color: #000;
+                        font-size: 16px;
+                        line-height: 1.63;
+                    }
+                }
+
+                .account-order-totals {
+                    width: 100%;
+                    margin-top: 25px;
+                }
+                
+            }
+        }
+
+    }
+}
+
 // Order history
 
-.template-account-order-history {
+.account__order-details {
+    h1 {
+        letter-spacing: 8px;
+        text-align: center;
+        color: $color-black;
+        font-size: 40px ;
+        font-family: $font-montser;
+        text-transform: uppercase;
+        margin-bottom: 70px;
+    }
+}
+
+.template-account-order-history,.account-order-history {
     width: calc(100% - 273px);
     .template-account-order-shipping-info {
         display: none;
     }
-            .account-address {
-                div {
-                    float: left;
-                    width: 49.5%;
+
+    .account-order-history-orders {
+        tr {
+            th {
+                text-transform: uppercase;
+                font-size: 15px;
+                font-weight: bold;
+                line-height: 1.87;
+                letter-spacing: normal;
+                color: #000000;
+                font-family: 'Montserrat-Bold';
+            }
+
+            td {
+                a {
+                    text-transform: uppercase;
+                    font-size: 15px;
+                    line-height: 1.73;
+                    letter-spacing: normal;
+                    text-align: center;
+                    color: #2d2d2d;
+                    font-family: 'inter_regular';
                 }
             }
         }
     }
 
+    .title-history,h2 {
+        font-family: 'Montserrat-ExtraBold';
+        font-size: 18px;
+        line-height: 1.56;
+        letter-spacing: normal;
+        color: #232323;
+        border-bottom: 2px solid #dfdfdf;
+        max-width: max-content;
+        padding-bottom: 12px;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
 
+    .header-infor-history {
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            li {
+                padding: 0px 0 20px 0;
+                display: flex;
+                span {
+                    width: 80%;
+                    &:first-child {
+                        width: 20%;
+                        font-weight: 600px;
+                        font-family: 'inter-bold';
+                    }
+                }
+            }
+        }
+    }
+   
 }
+
+// My wishlist 
+body.page-template-page\.wishlist {
+    h1 {
+        letter-spacing: 8px;
+        text-align: center;
+        color: $color-black;
+        font-size: 40px !important;
+        font-family: $font-montser;
+        text-transform: uppercase;
+        margin-bottom: 70px;
+    }
+
+    .wishlist {
+        width: calc(100% - 273px);
+    }
+}
+   
+

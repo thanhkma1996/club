@@ -72,6 +72,8 @@
         },
         "account": {
             "header": "account overview",
+            "header-wishlist": "My Wishlist",
+            "order_details": "Orders",
             "order_history": "Order history",
             "order": "Order",
             "payment": "Payment",
@@ -82,6 +84,7 @@
             "empty": "You have no orders",
             "new_address_link": "Add new address",
             "acc_information": "Account Information",
+            "billing_address": "Billing address",
             "acc_address": "Account address",
             "acc_additional": "additional address",
             "additional_description": "You have no other address entries in your address book.",
@@ -102,8 +105,8 @@
         },
         "order": {
             "header": "Order {{ order_number }}",
+            "title_header": "Orders",
             "shipping_address": "Shipping address",
-            "billing_address": "Billing address",
             "item": "Item",
             "title": "Title",
             "options": "Options",
@@ -192,7 +195,7 @@
         "pagination": {
             "blog": "Back to blog",
             "previous": "Previous post",
-            "next": "Next post",
+            "next": "Next post"
         },
         "excerpt": {
             "read_more": "Read more"
