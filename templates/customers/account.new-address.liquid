@@ -1,0 +1,115 @@
+<div class="title-new-address">
+    <h2>{{ 'customers.addresses.add_new_address' | t }}</h2>
+</div>
+
+<div class="columns-main">
+    {%- include 'account-nav' -%} 
+
+    <div class="account-add-new">
+    <div class="account-add-new-address">
+
+        <div id="AddressNewForm"
+            data-address-form-id="AddressNewForm"
+            
+            class="account-address__form"
+        >
+        {% form 'customer_address', customer.new_address %}
+
+            <input type="hidden" name="return_to" value="/account/addresses" />
+
+            <div class="account-add-new__content">
+            <div class="form-vertical row">
+                <div class="form-content">
+                <div class="select-wrapper">
+                    <label for="AddressCountryNew">{{ 'customers.addresses.country' | t }}</label>
+                    <select id="AddressCountryNew"
+                            class="select-base"
+                            name="address[country]"
+                            required
+                            data-default="{{ form.country }}">{{ country_option_tags }}</select>
+                </div>
+                </div>
+                <div class="form-content">
+                <div class="input-wrapper">
+                    <label for="AddressFirstNameNew_{{ form.id }}">{{ 'customers.addresses.full_name' | t }}</label>
+                    <input class="input-base" type="text" id="AddressFirstNameNew_{{ form.id }}" name="address[first_name]"
+                        value="{{ form.first_name }}" size="40" required>
+                </div>
+                </div>
+                <div class="form-content">
+                <div class="input-wrapper">
+                    <label for="AddressCompanyNew_{{ form.id }}">{{ 'customers.addresses.company_name' | t }}</label>
+                    <input type="text" id="AddressCompanyNew_{{ form.id }}"
+                        class="input-base"
+                        name="address[company]"
+                        value="{{ form.company }}">
+                </div>
+                </div>
+
+                <div class="form-content">
+                <div class="input-wrapper">
+                    <label for="AddressPhoneNew_{{ form.id }}">{{ 'customers.addresses.phone' | t }}</label>
+                    <input type="text" id="AddressPhoneNew_{{ form.id }}" class="input-base" required name="address[phone]" value="{{ form.phone }}">
+                </div>
+                </div>
+                <div class="form-content">
+                    <div class="input-wrapper">
+                        <label for="AddressAddress1New">{{ 'customers.addresses.address1' | t }}</label>
+                        <input type="text" id="AddressAddress1New" required class="input-base" name="address[address1]"
+                            value="{{ form.address1 }}">
+                    </div>
+                </div>
+                <div class="form-content">
+                        <div class="input-wrapper">
+                        <label for="AddressAddress2New">{{ 'customers.addresses.address2' | t }}</label>
+                        <input type="text" id="AddressAddress2New" class="input-base" name="address[address2]"
+                                value="{{ form.address2 }}">
+                        </div>
+                </div>
+
+                <div class="form-content">
+                    <div class="input-wrapper">
+                    <label for="AddressCityNew">{{ 'customers.addresses.city' | t }}</label>
+                    <input type="text" id="AddressCityNew" required class="input-base" name="address[city]"
+                            value="{{ form.city }}">
+                    </div>
+                </div>
+
+                <div class="form-content">
+                        <div class="col-xs-6">
+                        <div class="input-wrapper">
+                            <label for="AddressZipNew">{{ 'customers.addresses.zip' | t }}</label>
+                            <input type="text" id="AddressZipNew" required class="input-base" name="address[zip]" value="{{ form.zip }}"
+                                autocapitalize="characters">
+                        </div>
+                        <div class="col-xs-6" id="AddressProvinceContainerNew" style="display:none">
+                        <div class="select-wrapper">
+                            <label for="AddressProvinceNew">{{ 'customers.addresses.province' | t }}</label>
+                            <select id="AddressProvinceNew"
+                                    class="select-base"
+                                    required
+                                    name="address[province]" data-default="{{ form.province }}"></select>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-content">
+                {{ form.set_as_default_checkbox }}
+                <label for="address_default_address_new">{{ 'customers.addresses.set_default' | t }}</label>
+                </div>
+
+            </div>
+            </div>
+
+            <div class="account-add-new__footer">
+            <button type="submit" class="btn btn-black btn--wide">{{ 'customers.addresses.add' | t }}</button>
+            <!-- <button type="button" class="btn btn-primary-o" data-address-form>Close</button> -->
+            </div>
+
+        {% endform %}
+        </div>
+    </div>
+    </div>
+ </div>
+
+ 

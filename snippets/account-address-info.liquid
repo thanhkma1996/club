@@ -68,7 +68,7 @@
                   <p>{{ 'customers.addresses.default_address_message' | t }}</p>
                 {% endif %}
                 <a class="button edit-address secondary" href="account/addresses" data-edit-address="{{ address.id }}">{{ 'customers.addresses.edit' | t }}</a>
-                <a class="button delete-address" href="account/addresses" data-delete-address="{{ address.id }}">{{ 'customers.addresses.delete' | t }}</a>
+                <a class="button delete-address" href="#" data-delete-address="{{ address.id }}">{{ 'customers.addresses.delete' | t }}</a>
               </div>
             {% increment my_num %}
                 {% if my_num == 1 %}

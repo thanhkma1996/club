@@ -16,6 +16,7 @@ $color-df: #dfdfdf;
         font-family: $font-montser;
         text-transform: uppercase;
         margin-bottom: 70px;
+        font-size: 40px !important;
     }
 
     .errors {
@@ -216,6 +217,15 @@ body.page-template-customers\/account\.order,body.page-template-customers\/order
             margin-bottom: 60px;
         }
 
+        .account-info {
+            p {
+                margin: 7px 0 0 0;
+                span {
+                    margin: 5px 0 5px 0;
+                }
+            }
+        }
+
         .btn-add-new {
             background-color: #2d2d2d;
             max-width: 221px;
@@ -255,7 +265,7 @@ body.page-template-customers\/account\.order,body.page-template-customers\/order
     display: none;
 }
 
-// My address
+// My address list
 .template-account-addresses {
     margin-bottom: 80px;
     .account-address {
@@ -278,6 +288,14 @@ body.page-template-customers\/account\.order,body.page-template-customers\/order
         border-bottom: 2px solid $color-df;
         text-transform: uppercase;
     }
+
+    .account-addresses-list {
+        .account-address {
+            float: left;
+            width: 50%;
+        }
+    }
+
 }
 
 .template-account-addresses-title {
@@ -319,6 +337,22 @@ body.page-template-customers\/account\.order,body.page-template-customers\/order
     body.page-template-customers\/account\.order { 
         .site-main {
             padding: 0 50px;
+        }
+    }
+
+    // list address 
+    body.page-template-customers\/addresses { 
+        .site-main {
+            margin: 0 50px;
+        }
+
+        .columns-main {
+            .template-account-addresses {
+                 padding: 0;
+                 margin: 0;
+            }
+
+           
         }
     }
 }
@@ -549,6 +583,29 @@ body.page-template-customers\/account\.order,body.page-template-customers\/order
             }
         }
     }
+
+    // List address
+    body.page-template-customers\/addresses {
+        .site-main {
+            margin: 0 30px;
+        }
+        .template-account-addresses-title  {
+            font-size: 22px;
+            letter-spacing: 4px;
+            text-align: center;
+            color: #000;
+            margin: 20px 0 30px 0;
+        }
+
+        .template-account-addresses {
+            .account-addresses-list {
+                .account-address {
+                    width: 100%;
+                }
+            }
+        }
+     
+    }
 }
 
 // Order history
@@ -672,3 +729,134 @@ body.page-template-page\.wishlist {
 }
    
 
+// Add New account
+body.page-template-customers\/account\.new-address  {
+    .site-main {
+        margin-bottom: 100px;
+    }
+    .title-new-address {
+        h2 {
+            letter-spacing: 8px;
+            text-align: center;
+            color: #000;
+            font-size: 40px;
+            font-family: 'Montserrat-ExtraBold';
+            text-transform: uppercase;
+            margin-bottom: 70px;
+        }
+    }
+    .columns-main {
+        .account-add-new {
+            width: calc(100% - 197px);
+            .account-add-new__content {
+                .form-content {
+                    float: left;
+                    width: 48.5%;
+                    margin-right: 20px;
+                    &:nth-child(2n + 2) {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+
+        .account-add-new-address  {
+            .input-wrapper {
+                float: left;
+                width: 100%;
+                margin: 0px 0px 30px 0;
+            }
+        }
+        
+    }
+
+    .account-add-new__footer {
+        clear: both;
+        button {
+            margin-top: 50px;
+            margin-top: 50px;
+            padding-right: 24px;
+            padding-left: 24px;
+            font-family: 'Inter-Bold';
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            cursor: pointer;
+            background: #2d2d2d;
+            border: 0;
+            padding: 20px;
+            min-width: 160px;
+        }
+    }
+}
+
+@media (max-width:1024px) {
+    body.page-template-customers\/account\.new-address  {
+        .site-main {
+            margin: 0 50px 80px 50px;
+        }
+
+        .columns-main {
+            .account-add-new {
+                .account-add-new__content {
+                    .form-content {
+                        width: 48%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    body.page-template-customers\/account\.new-address  {
+        .site-main {
+            margin: 0 30px 80px 30px;
+        }
+        .title-new-address {
+            h2 {
+                font-size: 22px;
+                letter-spacing: 4px;
+                text-align: center;
+                color: #000;
+                margin: 20px 0 30px 0;
+            }
+        }
+
+        .account-add-new {
+            width: 100%;
+            .account-add-new-address form {
+                width: 100%;
+                margin-left: 0;
+                .account-add-new__content .form-content  {
+                    width: 100%;
+                    margin: 0 0 30px 0;
+                }
+            }
+        }
+
+        .columns-main {
+            .account-add-new {
+                width: 100%;
+                .account-add-new__content {
+                    margin-top: 30px;
+                }
+            }
+
+            .account-add-new-address  {
+                .input-wrapper {
+                    margin: 0;
+                }
+            }
+        }
+
+        .account-add-new__footer button {
+            margin-top: 30px;
+        }
+       
+    }
+}

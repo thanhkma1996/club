@@ -1552,15 +1552,13 @@
   .account-address-forms {
     display: block;
     width: 100%;
-
-    @include media($min: $breakpoint-l) {
-      float: left;
-      width: 50%;
-    }
   }
 
   .account-address-form {
-    display: none;
+      display: none;
+  }
+
+  .account-address-form,.account-add-new-address{
 
     form {
       @extend %clearfix;
@@ -1582,6 +1580,15 @@
       -webkit-appearance: none;
          -moz-appearance: none;
               appearance: none;
+    }
+
+    select {
+      position: relative;
+      background-repeat: no-repeat;
+      background-size: 10px;
+      background-position: 96% center;
+      padding: 0 16px;
+      background-image: url("{{ 'arrow-select.png' | asset_url }}");
     }
 
     input[type="submit"] {
@@ -1626,7 +1633,7 @@
   }
 
   .account-address {
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 
     span {
       display: block;
