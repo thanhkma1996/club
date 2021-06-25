@@ -150,6 +150,20 @@ $color-df: #dfdfdf;
         margin-bottom: 70px;
     }
 
+    a {
+        font-size: 15px;
+        font-style: normal;
+        line-height: 1.73;
+        letter-spacing: normal;
+        color: #2d2d2d;
+    }
+
+}
+
+body.page-template-customers\/account\.order,body.page-template-customers\/order {
+    .site-main {
+        padding: 30px 0 100px;
+    }
 }
 
 .columns-main {
@@ -187,7 +201,7 @@ $color-df: #dfdfdf;
             color:$color-23;
             font-family: $font-montser;
             padding-bottom: 10px;
-            border-bottom: 1px solid $color-df;
+            border-bottom: 2px solid $color-df;
             text-transform: uppercase;
         }
         .title-account {
@@ -200,6 +214,22 @@ $color-df: #dfdfdf;
 
         .account-info,.container-address,.account-additional {
             margin-bottom: 60px;
+        }
+
+        .btn-add-new {
+            background-color: #2d2d2d;
+            max-width: 221px;
+            margin-top: 30px;
+            text-align: center;
+            a {
+                font-size: 14px;
+                color: #ffffff;
+                text-transform: uppercase;
+                text-decoration: none;
+                padding: 20px;
+                line-height: 42px;
+                font-family: 'inter_regular';
+            }
         }
 
         .account-address {
@@ -225,6 +255,41 @@ $color-df: #dfdfdf;
     display: none;
 }
 
+// My address
+.template-account-addresses {
+    margin-bottom: 80px;
+    .account-address {
+        p {
+            font-size: 15px;
+            line-height: 1.73;
+            letter-spacing: normal;
+            color: #2d2d2d;
+        }
+    }
+
+    h2 {
+        max-width: max-content;
+        font-size: 15px;
+        line-height: 1.56;
+        letter-spacing: normal;
+        color:$color-23;
+        font-family: $font-montser;
+        padding-bottom: 10px;
+        border-bottom: 2px solid $color-df;
+        text-transform: uppercase;
+    }
+}
+
+.template-account-addresses-title {
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: 8px;
+    text-align: center;
+    color: #000000;
+    margin:50px 0;
+    text-transform: uppercase;
+}
+
 // tablet
 @media (min-width:768px) {
     .js-account-nav {
@@ -233,14 +298,27 @@ $color-df: #dfdfdf;
 }
 
 // Mobile account
-@media (max-width:1023px) {
+@media (max-width:1024px) {
     .columns-main {
         .sidebar.sidebar-main {
             margin-right: 50px;
         }
 
-        .template-account-order-history {
+        .template-account-order-history,.account-order-history,.content-my-account {
             width: calc(100% - 197px);
+        }
+    }
+
+    .template-account {
+        padding: 0 50px;
+        .account-order-history {
+            width: 100%;
+        }
+    }
+
+    body.page-template-customers\/account\.order { 
+        .site-main {
+            padding: 0 50px;
         }
     }
 }
@@ -258,21 +336,65 @@ $color-df: #dfdfdf;
 
         .account-order-history  {
             width: 100%;
+            margin-top: 20px;
+        }
+
+        .account-order-history h2 {
+            font-size: 16px;
+            font-style: normal;
+            line-height: 1.63;
+            letter-spacing: normal;
+            color: #232323;
         }
         
+    }
+
+    .account-order-history-orders {
+        thead {
+            display: none;
+        }
+
+        tr {
+            display: block;
+            td {
+                display: block;
+                padding: 2px 0;
+                position: relative;
+                text-align: left;
+                padding-left: 117px;
+                font-size: 15px;
+                font-style: normal;
+                line-height: 1.73;
+                letter-spacing: normal;
+                color: #2d2d2d;
+            }
+
+            td:before {
+                content: attr(data-th) '';
+                display: inline;
+                font-weight: 700;
+                position: absolute;
+                left: 30px;
+            }
+        }
     }
    
     .account__order-details,.template-account,.account__order-history,.template-account-order {
         h1 {
             font-size: 22px !important;
-            letter-spacing: 4px !important;
+            letter-spacing: 4px ;
             text-align: center;
             color: #000000;
-            margin: 20px 10px 30px 10px;
-            margin-bottom: 0;
+            margin: 20px 0 30px 0 !important;
         }
     }
 
+    // Order history 
+    body.page-template-customers\/order {
+        .site-main {
+            padding: 0 0 50px 0;
+        }
+    }
     
     .columns-main {
         display: grid;
@@ -296,7 +418,7 @@ $color-df: #dfdfdf;
             border: none;
         }
 
-        .template-account-order-history {
+        .template-account-order-history,.content-my-account {
             width: 100%;
             margin-top: 15px;
             h2 {
@@ -358,6 +480,75 @@ $color-df: #dfdfdf;
         }
 
     }
+
+    // my dashboard 
+    .template-account {
+        padding: 0 30px;
+        h1 {
+            letter-spacing: 3px!important;
+        }
+
+        .account-order-history {
+            width: 100%;
+        }
+        .columns-main {
+            .content-my-account {
+                .title-account {
+                    font-size: 19px;
+                    line-height: 1.68;
+                }
+                
+                h2 {
+                    font-size: 16px;
+                    line-height: 1.63;
+                }
+
+                .account-info {
+                    p,span {
+                        margin: 3px 0;
+                        font-size: 15px;
+                        line-height: 1.73;
+                        color: #2d2d2d;
+                        text-decoration: none;
+                        a {
+                            color: #2d2d2d;
+                            text-decoration: none;
+                        }
+                    }
+                }
+
+                .account-address {
+                    .billing-address,.shipping-address {
+                        width: 100%;
+                        margin-bottom: 15px;
+                        h2 {
+                            font-size: 14px;
+                            line-height: 1.71;
+                            margin-bottom: 15px;
+                        }
+
+                        p {
+                            font-size: 15px;
+                            line-height: 1.73;
+                            span {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+
+                .account-order-history {
+                    display: none;
+                }
+
+                .account-additional, .account-info , .container-address {
+                    margin-bottom: 35px;
+                }
+
+                
+            }
+        }
+    }
 }
 
 // Order history
@@ -374,10 +565,33 @@ $color-df: #dfdfdf;
     }
 }
 
+.template-account {
+    .account-order-history {
+        width: 100%;
+    }
+
+    .account-address span {
+        margin-bottom: 10px;
+    }
+}
+
 .template-account-order-history,.account-order-history {
     width: calc(100% - 273px);
     .template-account-order-shipping-info {
         display: none;
+    }
+
+    .account-order {
+        .order-item-image {
+            width: 114px;
+            img {
+                width: 114px;
+            }
+        }
+
+        .order-item-title {
+            width: 50%;
+        }
     }
 
     .account-order-history-orders {

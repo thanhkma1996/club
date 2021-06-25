@@ -32,10 +32,11 @@
 <div class="account-additional">
     <h2 class="page-title">{{ 'customers.account.acc_additional'  | t}}</h2>
     <p class="content-additional">{{ 'customers.account.additional_description'  | t}}</p>
-    <a href="/account/addresses">{{ 'customers.account.new_address_link' | t }}</a>
+    <div class="btn-add-new">
+        <a href="/account/addresses">{{ 'customers.account.new_address_link' | t }}</a>
+    </div>
 </div>
 
-{% endif %}
 
 {%- include 'account-order' -%} 
 

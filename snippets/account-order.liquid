@@ -19,20 +19,20 @@
           <tbody>
             {% for order in customer.orders %}
               <tr class="{% if order.cancelled %}cancelled_order{% endif %}">
-                <td class="order-number first">
+                <td class="order-number first" data-th="Order">
                   {{ order.name | capitalize }}
                 </td>
-                <td class="order-date">
+                <td class="order-date" data-th="Date">
                   <span class="date">{{ order.created_at | date: format: 'short_day_month_year' }}</span>
                 </td>
-                <td class="order-name {{ order.name | capitalize }}">
+                <td class="order-name {{ order.name | capitalize }}" data-th="Ship to">
                   <span class="name">{{ order.shipping_address.first_name }} {{ order.shipping_address.last_name }}</span>
                 </td>
-                <td class="total"><span class="money">{{ order.total_price | money }}</span></td>
-                <td class="payment-status {{ order.financial_status }}">
+                <td class="total" data-th="Total"><span class="money">{{ order.total_price | money }}</span></td>
+                <td class="payment-status {{ order.financial_status }}" data-th="Status">
                   {{ order.financial_status | capitalize }}
                 </td>
-                <td class="order-number last">
+                <td class="order-number last" data-th="Action">
                   <a href="{{order.customer_url }}">view order</a>
                 </td>
               </tr>
