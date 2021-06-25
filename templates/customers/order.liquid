@@ -80,7 +80,7 @@
 
           <li>
             <span>Ship to: </span>
-            <span>Shipped 123 Bay St, Cheltenham VIC 3192, Australia</span>
+            <span>Shipped {{ order.shipping_address.street }}, {{ order.shipping_address.city }} {{ order.shipping_address.province_code }}, {{ order.shipping_address.country }}</span>
         </li>
         </ul>
       </div>
